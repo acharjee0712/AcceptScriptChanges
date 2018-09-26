@@ -27,7 +27,11 @@ https://developer.authorize.net/api/reference/features/customer_profiles.html#Us
 
 * Constants.js file contains Parameters that are used in the application.
 
+The URLs should be provided with IP address and API service site port number in the following format.
 
+https://<IPAddress>:<PortNumber>/api/AcceptSuite/<ApiMethodName>
+
+Find the below screenshots for refrence.
 
 * AcceptJSRequestUrl : URL to invoke Accept JS web service on payment.
 ![Image of AcceptJSRequestUrl](Github-Images/AcceptJSRequestUrl.PNG)
@@ -45,9 +49,13 @@ https://developer.authorize.net/api/reference/features/customer_profiles.html#Us
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
 * ClientKey 
+![Image of keys](Github-Images/clientKey.PNG)
+
 * ApiLoginID
+![Image of keys](Github-Images/apiLogin.PNG)
+
 * ApiTransactionKey
-![Image of keys](Github-Images/keys.PNG)
+![Image of keys](Github-Images/apiTransactionKey.PNG)
 
 
 
@@ -65,4 +73,4 @@ The following are the parameters with values that remains constant throughout th
 
 *   Click OK.
 
-	![Add-Website](Images/Add-Website.png)
+	![Image of Add-Website](Github-Images/iisSite.PNG)
