@@ -1,6 +1,6 @@
 # Accept Suite Integration
 
-## prerequisite:
+## Prerequisite:
 *	Windows 10 Professional
 *	Sublime Text or any editor of your choice.
 *	Internet Information Services 10
@@ -49,12 +49,15 @@ Find the below screenshots for refrence.
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
 * ClientKey 
+
 ![Image of keys](Github-Images/clientKey.PNG)
 
 * ApiLoginID
+
 ![Image of keys](Github-Images/apiLogin.PNG)
 
 * ApiTransactionKey
+
 ![Image of keys](Github-Images/apiTransactionKey.PNG)
 
 
