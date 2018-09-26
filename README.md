@@ -29,7 +29,7 @@ https://developer.authorize.net/api/reference/features/customer_profiles.html#Us
 
 The URLs should be provided with IP address and API service site port number in the following format.
 
-https://IPAddress:PortNumber/api/AcceptSuite/<ApiMethodName>
+https://IPAddress:PortNumber/api/AcceptSuite/ApiMethodName
 
 Find the below screenshots for refrence.
 
