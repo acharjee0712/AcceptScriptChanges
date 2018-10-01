@@ -39,22 +39,19 @@ Below are the URLs that are passed as parameters in script through Ajax calls to
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validated customer ID.
 ![Image of ValidateCustomerUrl](Github-Images/ValidateCustomerUrl.PNG)
  
-Below URLs are used to submit form with token value inorder to load the payment form.
 
-* HostedFormUrl : Used for Accept Hosted form.
-![Image of HostedFormUrl](Github-Images/HostedFormUrl.PNG)
-* CustomerFormUrl : Used for Accept Customer form.
-![Image of CustomerFormUrl](Github-Images/CustomerFormUrl.PNG)
- 
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
 * ClientKey 
+
 ![Image of clientKey](Github-Images/clientKey.PNG)
 
 * ApiLoginID
+
 ![Image of apiLogin](Github-Images/apiLogin.PNG)
 
 * ApiTransactionKey
+
 ![Image of apiTransactionKey](Github-Images/apiTransactionKey.PNG)
 
 
