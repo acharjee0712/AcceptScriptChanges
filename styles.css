@@ -409,3 +409,10 @@ margin-right: 3px;
         position: fixed;
     }
 }
+
+@media screen and (max-width:600px){
+     
+    .col-md-8 #framePayment{
+        width: 80%;
+    }
+}

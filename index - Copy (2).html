@@ -27,7 +27,7 @@
   <!-- Begin Accept JS -->
   <div id="acceptjs" class="acceptjsCont productCont container">
    <div>
-      <h2 style="text-align: center;color:black;">Accept.js</h2>
+      <h2 style="text-align: center;color:#ffffff">Accept.Js</h2>
     </div>
    <div class="row">
     <div class="col-md-12 alertCont">
@@ -37,13 +37,12 @@
     </div>
 
     </div>
-    <div class="col-md-6" id="paymentDivJS" style="padding-left: 1%;padding-top: 0;margin-left: 3%;">
-      <div class="panel pane-default" style="width: 99%;background: rgba(0,0,0,0);border: none; outline: none;">
-        
-        <div class="panel-body" style="width:100%;margin: 16%;margin-top:2%;margin-bottom:2%;margin-left:3.5%;box-shadow: 1px 1px 2px 2px;background-color: white;border-radius: 1%;padding-top: 0.5%;">
-          <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: steelblue;margin-top: 3.5%;margin-bottom: 4%;padding: 1%;color: white;">
-              <h4 style="margin:0%;padding: 1%;">Payment Details</h4>
-          </div>
+    <div class="col-md-5" id="paymentDivJS" style="padding-left: 4%;padding-top: 1%">
+      <div class="panel pane-default" style="width: 99%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;">
+        <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: #d3d3d3;">
+          <h4 style="margin:0%;">Payment Details</h4>
+        </div>
+        <div class="panel-body">
            <!-- <form role="form"> -->
           <!-- Radio button -->
              <div class="row" style="padding-bottom: 5%">
@@ -62,7 +61,7 @@
              </div>
           <!-- Credit card Div    -->
               <div id="card" class="hideElement">
-                <div class="row" style="width: 88%;margin-left: 6%">
+                <div class="row">
                    <div class="col-xs-12">
                      <div class="form-group">
                        <label for="Card Number" class="lblFields lblreq">Card Number</label>
@@ -72,7 +71,7 @@
                       </div>
                    </div>
                 </div>
-                 <div class="row" style="width: 88%;margin-left: 6%">
+                 <div class="row">
                    <div class="col-xs-6">
                      <div class="form-group">
                      <label for="Exp Month" class="lblFields lblreq">Exp Month</label>
@@ -82,7 +81,7 @@
                     </div>
                    </div>
                    <div class="col-xs-6">
-                    <div class="form-group" style="float: right;">
+                    <div class="form-group">
                     <label for="Exp Month" class="lblFields lblreq">Exp Year</label>
                      <div class="input-group">
                        <input type="text" class="form-control" style="margin-left: 0%" name="expYear" id="expYear" placeholder="YY" maxlength="2" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)"/>
@@ -90,7 +89,7 @@
                     </div>
                    </div>
                  </div>
-                 <div class="row" style="width: 88%;margin-left: 6%">
+                 <div class="row">
                    <div class="col-xs-12">
                      <div class="form-group">
                         <label for="Card code" class="lblFields">Card Code</label>
@@ -103,7 +102,7 @@
               </div>
           <!-- Bank Account Div -->
               <div id="bank" class="hideElement">
-                <div class="row" style="width: 88%;margin-left: 6%">
+                <div class="row">
                  <div class="col-xs-12">
                   <div class="form-group">
                     <label for="Account Type" class="lblFields lblreq">Account Type</label>
@@ -121,7 +120,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="row" style="width: 88%;margin-left: 6%">
+                <div class="row">
                   <div class="col-xs-12">
                     <div class="form-group">
                       <label for="Name on Account" class="lblreq">Name on Account</label>
@@ -131,7 +130,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row" style="width: 88%;margin-left: 6%">
+                <div class="row">
                   <div class="col-xs-12">
                     <div class="form-group">
                       <label for="Account Number" class="lblreq">Account Number</label>
@@ -141,7 +140,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row" style="width: 88%;margin-left: 6%">
+                <div class="row">
                   <div class="col-xs-12">
                     <div class="form-group">
                       <label for="Routing Number" class="lblreq">Routing Number</label>
@@ -153,14 +152,14 @@
                 </div>
               </div>
           <!-- Buttons -->
-              <div class="row" style="padding-top: 2.5%;" id="btns">
+              <div class="row" style="padding-top: 3%;" id="btns">
                    <input type="hidden" name="dataValue" id="dataValue" />
                    <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
                    <div class="col-xs-6" style="padding-left: 25%;">
-                     <button type="Submit" class="btn btn-primary btnpay" style="width:65%" id="btnPayJS" onclick="sendPaymentDataToAnet();">Pay
+                     <button type="Submit" class="btn btn-primary btnpay" style="width:90%" id="btnPayJS" onclick="sendPaymentDataToAnet();">Pay
                       </button>
                    </div>
-                   <div class="col-xs-6" style="padding-right: 22%">
+                   <div class="col-xs-6">
                       <button class="btn btn-default btncancel"><a href="index_all.html" id="btnCancelJS" style="text-decoration-line: none; ">Cancel</a>
                       </button>
                    </div>
@@ -169,83 +168,82 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5" id="cartJS" style="padding-left: 3%;padding-top: 0 ; ">
-      <div class="panel pane-default" style="width: 99%;background: rgba(0,0,0,0);border: none; outline: none;">
-        
-        <div class="panel-body" style="width:100%;margin: 16%;margin-top:2.3%;margin-left:1%;box-shadow: 1px 1px 2px 2px;background-color: white;border-radius: 1%;padding-top: 1.3%;">
-            <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: steelblue;margin-bottom: 4%;margin-top: 4.2%;padding: 2%;color: white;">
-                <h4 style="margin:0%;padding:1% ">Order Summary</h4>
-            </div>
-          <div class="row" style="padding-top: 2%">
+    <div class="col-md-7" id="cartJS" style="padding-left: 3%;padding-top: 1% ; ">
+      <div class="panel pane-default" style="width: 95%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;">
+        <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: #d3d3d3;">
+          <h4 style="margin:0%;">Order Summary</h4>
+        </div>
+        <div class="panel-body" style="padding-top:  5%;padding-bottom: 4.3%;">
+          <div class="row" style="padding-top: 1%">
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/spects.jpg" alt="">
              </div>
-             <div class="col-xs-5">
-               <span style="margin-right:100%">Sunglasses</span>
+             <div class="col-xs-3">
+               <span>Sun Protection Goggles</span>
                <span>Black</span>
              </div>
-             <div class="col-xs-2">
+             <div class="col-xs-3">
                1x$19
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $19
              </div>
           </div>
-          <div class="row" style="padding-top: 5%">
+          <div class="row" style="padding-top: 2%">
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/bag.jpg" alt="">
              </div>
-             <div class="col-xs-5">
+             <div class="col-xs-3">
                <span style="margin-right:100%">Backpack</span>
                <span>Blue</span>
              </div>
-             <div class="col-xs-2">
+             <div class="col-xs-3">
                1x$23
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $23
              </div>
           </div>
-          <div class="row" style="padding-top: 5%">
+          <div class="row" style="padding-top: 2%">
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/jacket.jpg" alt="">
              </div>
-             <div class="col-xs-5">
-               <span>Leather Jacket</span>
+             <div class="col-xs-3">
+               <span>Men's Leather Jacket</span>
                <span>Brown</span>
              </div>
-             <div class="col-xs-2">
+             <div class="col-xs-3">
                1x$33
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $33
              </div>
           </div>
-          <div class="row" style="padding-top: 5%;padding-bottom: 3%">
+          <div class="row" style="padding-top: 2%">
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/shoes.jpg" alt="">
              </div>
-             <div class="col-xs-5">
+             <div class="col-xs-3">
                <span>Sports Shoes</span>
                <span>White</span>
              </div>
-             <div class="col-xs-2">
+             <div class="col-xs-3">
                1x$24
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $24
              </div>
           </div>
-          <div class="row panel-footer" style="padding-top: 1%">
+          <div class="row panel-footer" style="padding-top: 2%">
              <div class="col-xs-3">
              </div>
-             <div class="col-xs-5">
+             <div class="col-xs-3">
               
              </div>
-             <div class="col-xs-2" style="padding-left: 6%;font-weight: bold">
+             <div class="col-xs-3" style="padding-left: 4%;font-weight: bold">
                Total
              </div>
-             <div class="col-xs-2" style="padding-left: 7%;font-weight: bold">
+             <div class="col-xs-3" style="padding-left: 5%;font-weight: bold">
                $99
              </div>
           </div>
@@ -283,40 +281,282 @@
 </div>
 </div>
 </div>
+ <!--  <div id="acceptjs" class="acceptjsCont productCont container">
+    <header>
+      <p class="shop">ACCEPT JS</p>
+    </header>
+    <div class="row subCont">
+      <div class="alert alert-success" id="alert">
+        <p id="note" class="hideElement">Thank you! Your order has been successfully placed.</p>
+            <span id="msg"></span>
+          </div>
+      <div class="col-md-6">
+        <div class="shopping-cart paymentCont">
+          <div class="title txtLeft">
+            Payment Details
+          </div>
+          
+          <div class="paymentDiv">
+            <table class="tblpayment">
+              <tbody>
+                <tr>
+                  <td>
+                    <div>
+                      <label class="radio-inline">
+                        <input type="radio" id="rdCard" name="optradio" value="card" onclick="showData(this.value)">Credit Card
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" id="idBank" name="optradio" value="bank" onclick="showData(this.value)">Bank Account
+                      </label>
 
+                      <div class="content">
+                        <div id="card" class="hideElement">
+                         <table>
+                           <tbody>
+                             <tr>
+                               <td>
+
+                                <label for="Card Number" class="lblFields lblreq">Card Number</label>
+
+                              </td> 
+                              <td>  <label> 
+                                <input type="text" class="form-control" name="cardNumber" id="cardNumber" placeholder="CardNumber" maxlength="16" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)" /> 
+                             </label>
+                           </td>
+                         </tr>
+                         <tr> 
+                          <td>
+                            <label for="Exp Month" class="lblFields lblreq">Exp Month</label>
+                          </td>
+                          <td>
+                            <label >
+                             <input type="text" class="form-control" name="expMonth" id="expMonth" placeholder="MM" maxlength="2" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)" /> 
+                           </label>
+                           <td>
+                           </tr>
+                           <tr>
+                            <td>
+                              <label for="Exp Month" class="lblFields lblreq">Exp Year</label>
+                            </td>
+                            <td>
+                              <label >
+                               <input type="text" class="form-control" name="expYear" id="expYear" placeholder="YY" maxlength="2" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)"/> 
+                             </label>
+                           </td>
+                         </tr>
+                         <tr>
+                          <td>
+                            <label for="Card code" class="lblFields">Card Code</label>
+                          </td>
+                          <td>
+                            <label >
+                             <input type="text" class="form-control" name="cardCode" id="cardCode" onkeypress="return isNumber(event)" placeholder="CardCode" maxlength="4" /> 
+                           </label>
+                         </td>
+                       </tr>
+
+                     </tbody>
+                   </table>      
+
+                 </div>
+
+                 <div id="bank" class="hideElement">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label for="Account Type" class="lblFields lblreq">Account Type</label>
+                        </td> 
+                        <td class="accountType">   
+                        <label class="radio-inline mLeft10">
+                        <input type="radio" id="checking" name="acntradio" value="checking">Checking
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" id="savings" name="acntradio" value="savings">Savings
+                      </label>
+                      <label class="radio-inline mrgB10">
+                        <input type="radio" id="business" name="acntradio" value="business checking">Business Checking
+                      </label> 
+                        </td> 
+                      </tr> 
+                      <tr>
+                        <td>  
+                          <label for="Name on Account" class="lblFields lblreq">Name on Account</label>
+                        </td>
+                        <td>  
+                          <label>
+
+                            <input type="text" class="form-control" name="nameOnAccount" id="nameOnAccount" placeholder="NameOnAccount" maxlength="22" oninput="onTextInput(this.id)" /> 
+                          </label>
+                        </td> 
+                      </tr>   
+                      <tr>    
+                        <td>  
+
+                          <label for="Account Number" class="lblFields lblreq">Account Number</label>
+                        </td>
+                        <td>  
+                          <label>
+                            <input type="text" class="form-control" name="accountNumber" id="accountNumber" placeholder="AccountNumber" maxlength="17" oninput="onTextInput(this.id)" /> 
+                          </label>
+                        </td> 
+                      </tr>
+                      <tr>
+                        <td>  
+                          <label for="Routing Number" class="lblFields lblreq">Routing Number</label>
+                        </td>
+                        <td>  
+                          <label>
+                            <input type="text" class="form-control" name="routingNumber" id="routingNumber" placeholder="RoutingNumber" maxlength="9" oninput="onTextInput(this.id)" /> 
+                          </label>
+                        </td>   
+                      </tr> 
+                      
+                      
+                    </tbody> 
+                  </table>
+                </div>
+
+                <br>
+                <input type="hidden" name="dataValue" id="dataValue" />
+                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                <div id="btns" class="hideElement"> 
+                  <button type="Submit" class="btn btn-primary btnpay" onclick="sendPaymentDataToAnet();">Pay
+                  </button>
+                  <button class="btn btn-primary btncancel"><a href="index_all.html">Cancel</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+ <div class="shopping-cart order" style="height: 500px;width: 450px;">
+
+    <div class="title">
+      Order Summary
+    </div>
+   
+    <div style="opacity:0.5"></div>
+    <div class="item" style="
+    margin-bottom: 30px;
+     ">
+      <div class="image">
+        <img src="images/spects.jpg" alt="">
+      </div>
+      <div class="description">
+        <span>Sun Protection Goggles</span>
+        <span>Black</span>
+      </div>
+      <div class="total-price">
+        1x$19.99
+      </div>
+      <div class="total-price amount">$19.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image" style="
+    width: 50px;
+    ">
+        <img src="images/bag.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+     ">
+
+        <span>Backpack</span>
+        <span>Blue</span>
+      </div>
+      <div class="total-price" style="
+    width: 85px;
+      ">
+        1x$22.99
+      </div>
+      <div class="total-price amount" style="
+    width: 85px;
+   ">$22.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/jacket.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+     ">
+
+        <span>Men's Leather Jacket</span>
+        <span>Brown</span>
+      </div>
+      <div class="total-price">
+        1x$33.99
+      </div>
+      <div class="total-price amount">$33.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/shoes.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+    ">
+
+        <span>Sports Shoes</span>
+        <span>White</span>
+      </div>
+      <div class="total-price">
+        1x$22.99
+      </div>
+      <div class="total-price amount">$22.99</div>
+    </div>
+    <hr class="hrTotal">
+    <div class="item divtotal">
+    <div class="total-pri lbltotal" style="margin-left: 175px;">Total</div>
+    <div class="total-pri amtTotal" style="margin-left: 20px;">$99.96</div>
+  </div>
+  
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    </div> -->
 <!-- End Accept JS -->
 
 <!-- Begin Aceept UI -->
 <div id="acceptui" class="acceptjsCont productCont container">
    <div>
-      <h2 style="text-align: center;color:black">Accept.js UI</h2>
+      <h2 style="text-align: center;color:#ffffff">Accept.Js UI</h2>
     </div>
-   <div class="row" style="padding-top: 0">
+   <div class="row" style="padding-top: 2%">
     <div class="col-md-7 alertContUI">
     <div class="alert alert-success" id="alertUI">
         <h5 id="noteUI" class="hideElement">Thank you! Your order has been successfully placed.</h5>
             <span id="msgUI"></span>
     </div>
    </div>
-    <div class="col-md-7 " id="cartUI" style="margin: 0 auto;float:inherit;padding-top: 2%;">
-      <div class="panel pane-default"  style="width: 100%;background: rgba(0,0,0,0);border: none; outline: none;">
-        
-        <div class="panel-body" style="padding-top:  5%;box-shadow: 1px 1px 2px 2px;background-color: white;border-radius: 1%;padding-top: 0.5%;">
-          <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: steelblue;margin-top: 3.5%;margin-bottom: 4%;padding: 1%;color: white;">
-             <h4 style="margin:0%;padding: 1%">Order Summary</h4>
-          </div>
+    <div class="col-md-12 " id="cartUI" style="padding-left: 23.7%;padding-top: 2%;">
+      <div class="panel pane-default" style="width: 70%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;">
+        <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: #d3d3d3;">
+          <h4 style="margin:0%;">Order Summary</h4>
+        </div>
+        <div class="panel-body" style="padding-top:  5%;">
           <div class="row" style="padding-top:  2%;">
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/spects.jpg" alt="">
              </div>
-             <div class="col-xs-4">
-               <span style="margin-right: 100%;">Sunglasses</span>
+             <div class="col-xs-3">
+               <span>Sun Protection Goggles</span>
                <span>Black</span>
              </div>
              <div class="col-xs-3">
                1x$19
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $19
              </div>
           </div>
@@ -324,14 +564,14 @@
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/bag.jpg" alt="">
              </div>
-             <div class="col-xs-4">
+             <div class="col-xs-3">
                <span style="margin-right:100%">Backpack</span>
                <span>Blue</span>
              </div>
              <div class="col-xs-3">
                1x$23
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $23
              </div>
           </div>
@@ -339,14 +579,14 @@
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/jacket.jpg" alt="">
              </div>
-             <div class="col-xs-4">
-               <span style="margin-right: 30%;">Leather Jacket</span>
+             <div class="col-xs-3">
+               <span>Men's Leather Jacket</span>
                <span>Brown</span>
              </div>
              <div class="col-xs-3">
                1x$33
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $33
              </div>
           </div>
@@ -354,47 +594,46 @@
              <div class="col-xs-3 image" style="padding-left: 10%;">
                <img src="images/shoes.jpg" alt="">
              </div>
-             <div class="col-xs-4">
-               <span style="margin-right: 30%;">Sports Shoes</span>
-               <span style="float: right;width: 100%">White</span>
+             <div class="col-xs-3">
+               <span>Sports Shoes</span>
+               <span>White</span>
              </div>
              <div class="col-xs-3">
                1x$24
              </div>
-             <div class="col-xs-2" style="color: #337ab7">
+             <div class="col-xs-3" style="color: #337ab7">
                $24
              </div>
           </div>
           <div class="row panel-footer">
              <div class="col-xs-3">
              </div>
-             <div class="col-xs-4">
+             <div class="col-xs-3">
               
              </div>
-             <div class="col-xs-3" style="padding-left: 4.5%;font-weight: bold">
+             <div class="col-xs-3" style="padding-left: 4%;font-weight: bold">
                Total
              </div>
-             <div class="col-xs-2" style="padding-left: 5%;font-weight: bold">
+             <div class="col-xs-3" style="padding-left: 5%;font-weight: bold">
                $99
              </div>
           </div>
-          <form id="paymentForm" method="POST">
-           <input type="hidden" name="dataValue" id="dataValue" />
-           <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
-          <div class="btnsUI" style="padding-left: 10%;padding-top: 2.5%">
-           <button type="button"
-           class="AcceptUI btn btn-primary btnpay" id="btnAcceptUI"
-           data-billingAddressOptions='{"show":true, "required":false}'
-           data-acceptUIFormBtnTxt="Submit"
-           data-acceptUIFormHeaderTxt="Card Information"
-           data-responseHandler="responseHandler" style="width: 17%;">Pay
-          </button>
-          <button class="btn btn-default btncancel"><a href="index_all.html" style="text-decoration-line: none;">Cancel</a>
-          </button>
-          </div>
-         </form>
         </div>
-        
+        <form id="paymentForm" method="POST">
+         <input type="hidden" name="dataValue" id="dataValue" />
+         <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+        <div class="btnsUI" style="padding-left: 10%">
+         <button type="button"
+         class="AcceptUI btn btn-primary btnpay" id="btnAcceptUI"
+         data-billingAddressOptions='{"show":true, "required":false}'
+         data-acceptUIFormBtnTxt="Submit"
+         data-acceptUIFormHeaderTxt="Card Information"
+         data-responseHandler="responseHandler" style="width: 14%;">Pay
+        </button>
+        <button class="btn btn-default btncancel"><a href="index_all.html" style="text-decoration-line: none;">Cancel</a>
+        </button>
+        </div>
+       </form>
       </div>
     </div>
       <div class="col-md-6 confirmDiv" id="confirmDivUI">
@@ -434,58 +673,54 @@
 <!-- Begin Accept Hosted -->
 <div id="acceptHosted" class="acceptjsCont productCont container">
      <div>
-        <h2 style="text-align: center;color:black">Accept Hosted</h2>
+        <h2 style="text-align: center;color:#ffffff">Accept Hosted</h2>
       </div>
-     <div class="row" style="padding-top: 1%">
-      <div class="col-md-12 alertContHosted">
+     <div class="row" style="padding-top: 2%">
+      <div class="col-md-12 alertCont paddingR0">
       <div class="alert alert-success" id="alertHS">
         <p id="noteHS" class="hideElement">Thank you! Your order has been successfully placed.</p>
             <span id="msgHS"></span>
       </div>
     </div>
-     <div class="col-md-8" id="hostedPayment" style="padding-left: 4%;">
-        <div class="panel pane-default" style="width: 100%;background: rgba(0,0,0,0);border: none; outline: none;">
-          
-          <div class="panel-body" style="box-shadow: 1px 1px 2px 2px;background-color: white;border-radius: 1%;padding-top: 0.5%;">
-            <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: steelblue;margin-top: 2.5%;margin-bottom: 4%;padding: 0.6%;color: white;">
-              <h4 style="margin:0%;padding: 1%">Payment Details</h4>
-            </div>
+     <div class="col-md-5" id="hostedPayment" style="padding-left: 4%;">
+        <div class="panel pane-default" style="width: 99%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;">
+          <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: #d3d3d3;">
+            <h4 style="margin:0%;">Payment Details</h4>
+          </div>
+          <div class="panel-body">
             <!-- <div id="card" class="hideElement"> -->
-                <div class="row" id="framePayment" style="width: 98%;margin-left: -4%;padding-top: 0">
+                <div class="row">
                    <div class="col-xs-12">
-
-                    <iframe id="load_payment" class="embed-responsive-item w100" name="load_payment"  frameborder="0" scrolling="no" hidden="true" >
+                    <iframe id="load_payment" class="embed-responsive-item w100" name="load_payment"  frameborder="0" scrolling="yes" hidden="true" >
                     </iframe>
 
                     <form id="send_hptoken" method="post" target="load_payment" >
                       <input type="hidden" name="token" id="hostedtoken" value="" />
                     </form>
-                    
                    </div>
                 </div>
             </div>
           <!-- </div> -->
         </div>
       </div>
-      <div class="col-md-4" id="cartHosted" style="padding-top: 0 ; ">
-        <div class="panel pane-default" style="width: 100%;background: rgba(0,0,0,0);border: none; outline: none;">
-          
-          <div class="panel-body" style="width:100%;margin: 16%;margin-top:0;margin-left:1%;box-shadow: 1px 1px 2px 2px;background-color: white;border-radius: 1%;padding-top: 1.3%;">
-            <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: steelblue;margin-bottom: 4%;margin-top: 3%;padding: 1.5%;color: white;">
-              <h4 style="margin:0%;padding: 1%">Order Summary</h4>
-            </div>
-            <div class="row" style="padding-top:  1%;">
+      <div class="col-md-7" id="cartHosted" >
+        <div class="panel pane-default" style="width: 100%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;">
+          <div class="panel-heading" style="font-weight: 300;text-align: center;background-color: #d3d3d3;">
+            <h4 style="margin:0%;">Order Summary</h4>
+          </div>
+          <div class="panel-body" style="padding-top:  13%;padding-bottom: 12.9%;">
+            <div class="row" style="padding-top:  2%;">
                <div class="col-xs-3 image" style="padding-left: 10%;">
                  <img src="images/spects.jpg" alt="">
                </div>
-               <div class="col-xs-4">
-                 <span>Sunglasses</span>
+               <div class="col-xs-3">
+                 <span>Sun Protection Goggles</span>
                  <span>Black</span>
                </div>
                <div class="col-xs-3">
                  1x$19
                </div>
-               <div class="col-xs-2" style="color: #337ab7">
+               <div class="col-xs-3" style="color: #337ab7">
                  $19
                </div>
             </div>
@@ -493,57 +728,57 @@
                <div class="col-xs-3 image" style="padding-left: 10%;">
                  <img src="images/bag.jpg" alt="">
                </div>
-               <div class="col-xs-4">
+               <div class="col-xs-3">
                  <span style="margin-right:100%">Backpack</span>
                  <span>Blue</span>
                </div>
                <div class="col-xs-3">
                  1x$23
                </div>
-               <div class="col-xs-2" style="color: #337ab7">
+               <div class="col-xs-3" style="color: #337ab7">
                  $23
                </div>
             </div>
-            <div class="row" style="padding-top:  1%;">
+            <div class="row" style="padding-top:  2%;">
                <div class="col-xs-3 image" style="padding-left: 10%;">
                  <img src="images/jacket.jpg" alt="">
                </div>
-               <div class="col-xs-4">
-                 <span>Leather Jacket</span>
+               <div class="col-xs-3">
+                 <span>Men's Leather Jacket</span>
                  <span>Brown</span>
                </div>
                <div class="col-xs-3">
                  1x$33
                </div>
-               <div class="col-xs-2" style="color: #337ab7">
+               <div class="col-xs-3" style="color: #337ab7">
                  $33
                </div>
             </div>
-            <div class="row" style="padding-top:  1%;padding-bottom: 4%">
+            <div class="row" style="padding-top:  2%;">
                <div class="col-xs-3 image" style="padding-left: 10%;">
                  <img src="images/shoes.jpg" alt="">
                </div>
-               <div class="col-xs-4">
+               <div class="col-xs-3">
                  <span>Sports Shoes</span>
-                 <span >White</span>
+                 <span>White</span>
                </div>
                <div class="col-xs-3">
                  1x$24
                </div>
-               <div class="col-xs-2" style="color: #337ab7">
+               <div class="col-xs-3" style="color: #337ab7">
                  $24
                </div>
             </div>
-            <div class="row panel-footer" style="padding-top: 2%;padding-bottom: 2%;padding-left: 12%">
+            <div class="row panel-footer">
                <div class="col-xs-3">
                </div>
-               <div class="col-xs-4">
+               <div class="col-xs-3">
                 
                </div>
                <div class="col-xs-3" style="padding-left: 4%;font-weight: bold">
                  Total
                </div>
-               <div class="col-xs-2" style="padding-left: 5%;font-weight: bold">
+               <div class="col-xs-3" style="padding-left: 5%;font-weight: bold">
                  $99
                </div>
             </div>
@@ -611,20 +846,20 @@
 </div> -->
 <div id="acceptCustomer" class="acceptCustomerCont productCont container" >
    <div style="margin-top: 0%;">
-        <h2 style="text-align: center;color:black;">Accept Customer</h2>
+        <h2 style="text-align: center;color:#ffffff">Accept Customer</h2>
     </div>
   <div class="alert alert-success" id="alertCS">
         <p id="noteCS" class="hideElement">Thank you! Your order has been successfully placed.</p>
             <span id="msgCS"></span>
   </div>
   <input type="hidden" name="isvalidated" id="isvalidated" value="no">
-  <div class="col-md-10" style="margin: 0 auto;float: inherit;">
-        <div class="panel pane-default"> <!-- style="wide="width: 85%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;"> -->
+  <div class="col-md-12" style="padding-left: 14%;">
+        <div class="panel pane-default" style="width: 85%;border-color: #e0e7ea;box-shadow:  0px 1px 4px 1px;">
         
         
           <div class="panel-body" style="padding-bottom: 1%;">
 
-          <iframe id="load_profile" class="embed-responsive-item w100" name="load_profile"  frameborder="0" scrolling="no" hidden="true">
+          <iframe id="load_profile" class="embed-responsive-item w100" name="load_profile"  frameborder="0" scrolling="yes" hidden="true">
           </iframe>
 
           <form id="send_token" method="post" target="load_profile" >
@@ -646,7 +881,7 @@
             <div class="error-template">
                 <h1>
                     Oops!</h1>
-                <h2 id="invalidPage">
+                <h2>
                     404 Not Found</h2>
                 <div class="error-details">
                     Sorry, an error has occured, Please try again!
@@ -666,3 +901,4 @@
 src="https://jstest.authorize.net/v3/AcceptUI.js"
 charset="utf-8"></script>
 </body>
+</html> 

@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Accept Sample App</title>
+
+  <!-- Bootstrap core CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href="scripts/bootstrap.min.css" rel="stylesheet">
+  <script src="scripts/jquery-2.1.4.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <link href="styles.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js"></script>
+
+
+
+</head>
+<body>
+  <!-- Begin Accept JS -->
+  <div id="acceptjs" class="acceptjsCont productCont container">
+    <header>
+      <p class="shop">ACCEPT JS</p>
+    </header>
+    <div class="row subCont">
+      <div class="alert alert-success" id="alert">
+        <p id="note" class="hideElement">Thank you! Your order has been successfully placed.</p>
+            <span id="msg"></span>
+          </div>
+      <div class="col-md-6">
+        <div class="shopping-cart paymentCont">
+          <div class="title txtLeft">
+            Payment Details
+          </div>
+          
+          <div class="paymentDiv">
+            <table class="tblpayment">
+              <tbody>
+                <tr>
+                  <td>
+                    <div>
+                      <label class="radio-inline">
+                        <input type="radio" id="rdCard" name="optradio" value="card" onclick="showData(this.value)">Credit Card
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" id="idBank" name="optradio" value="bank" onclick="showData(this.value)">Bank Account
+                      </label>
+
+                      <div class="content">
+                        <div id="card" class="hideElement">
+                         <table>
+                           <tbody>
+                             <tr>
+                               <td>
+
+                                <label for="Card Number" class="lblFields lblreq">Card Number</label>
+
+                              </td> 
+                              <td>  <label> 
+                                <input type="text" class="form-control" name="cardNumber" id="cardNumber" placeholder="CardNumber" maxlength="16" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)" /> 
+                             </label>
+                           </td>
+                         </tr>
+                         <tr> 
+                          <td>
+                            <label for="Exp Month" class="lblFields lblreq">Exp Month</label>
+                          </td>
+                          <td>
+                            <label >
+                             <input type="text" class="form-control" name="expMonth" id="expMonth" placeholder="MM" maxlength="2" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)" /> 
+                           </label>
+                           <td>
+                           </tr>
+                           <tr>
+                            <td>
+                              <label for="Exp Month" class="lblFields lblreq">Exp Year</label>
+                            </td>
+                            <td>
+                              <label >
+                               <input type="text" class="form-control" name="expYear" id="expYear" placeholder="YY" maxlength="2" onkeypress="return isNumber(event)" oninput="onTextInput(this.id)"/> 
+                             </label>
+                           </td>
+                         </tr>
+                         <tr>
+                          <td>
+                            <label for="Card code" class="lblFields">Card Code</label>
+                          </td>
+                          <td>
+                            <label >
+                             <input type="text" class="form-control" name="cardCode" id="cardCode" onkeypress="return isNumber(event)" placeholder="CardCode" maxlength="4" /> 
+                           </label>
+                         </td>
+                       </tr>
+
+                     </tbody>
+                   </table>      
+
+                 </div>
+
+                 <div id="bank" class="hideElement">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label for="Account Type" class="lblFields lblreq">Account Type</label>
+                        </td> 
+                        <td class="accountType">   
+                        <label class="radio-inline mLeft10">
+                        <input type="radio" id="checking" name="acntradio" value="checking">Checking
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" id="savings" name="acntradio" value="savings">Savings
+                      </label>
+                      <label class="radio-inline mrgB10">
+                        <input type="radio" id="business" name="acntradio" value="business checking">Business Checking
+                      </label> 
+                        </td> 
+                      </tr> 
+                      <tr>
+                        <td>  
+                          <label for="Name on Account" class="lblFields lblreq">Name on Account</label>
+                        </td>
+                        <td>  
+                          <label>
+
+                            <input type="text" class="form-control" name="nameOnAccount" id="nameOnAccount" placeholder="NameOnAccount" maxlength="22" oninput="onTextInput(this.id)" /> 
+                          </label>
+                        </td> 
+                      </tr>   
+                      <tr>    
+                        <td>  
+
+                          <label for="Account Number" class="lblFields lblreq">Account Number</label>
+                        </td>
+                        <td>  
+                          <label>
+                            <input type="text" class="form-control" name="accountNumber" id="accountNumber" placeholder="AccountNumber" maxlength="17" oninput="onTextInput(this.id)" /> 
+                          </label>
+                        </td> 
+                      </tr>
+                      <tr>
+                        <td>  
+                          <label for="Routing Number" class="lblFields lblreq">Routing Number</label>
+                        </td>
+                        <td>  
+                          <label>
+                            <input type="text" class="form-control" name="routingNumber" id="routingNumber" placeholder="RoutingNumber" maxlength="9" oninput="onTextInput(this.id)" /> 
+                          </label>
+                        </td>   
+                      </tr> 
+                      
+                      
+                    </tbody> 
+                  </table>
+                </div>
+
+                <br>
+                <input type="hidden" name="dataValue" id="dataValue" />
+                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                <div id="btns" class="hideElement"> 
+                  <button type="Submit" class="btn btn-primary btnpay" onclick="sendPaymentDataToAnet();">Pay
+                  </button>
+                  <button class="btn btn-primary btncancel"><a href="index_all.html">Cancel</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+ <div class="shopping-cart order" style="height: 500px;width: 450px;">
+
+    <div class="title">
+      Order Summary
+    </div>
+   
+    <div style="opacity:0.5"></div>
+    <div class="item" style="
+    margin-bottom: 30px;
+">
+      <div class="image">
+        <img src="images/spects.jpg" alt="">
+      </div>
+      <div class="description">
+        <span>Sun Protection Goggles</span>
+        <span>Black</span>
+      </div>
+      <div class="total-price">
+        1x$19.99
+      </div>
+      <div class="total-price amount">$19.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image" style="
+    width: 50px;
+">
+        <img src="images/bag.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Backpack</span>
+        <span>Blue</span>
+      </div>
+      <div class="total-price" style="
+    width: 85px;
+">
+        1x$22.99
+      </div>
+      <div class="total-price amount" style="
+    width: 85px;
+">$22.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/jacket.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Men's Leather Jacket</span>
+        <span>Brown</span>
+      </div>
+      <div class="total-price">
+        1x$33.99
+      </div>
+      <div class="total-price amount">$33.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/shoes.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Sports Shoes</span>
+        <span>White</span>
+      </div>
+      <div class="total-price">
+        1x$22.99
+      </div>
+      <div class="total-price amount">$22.99</div>
+    </div>
+    <!--added by Dinesh-->
+    <hr class="hrTotal">
+    <!--added by Dinesh-->
+    <div class="item divtotal">
+    <div class="total-pri lbltotal" style="margin-left: 175px;">Total</div>
+    <div class="total-pri amtTotal" style="margin-left: 20px;">$99.96</div>
+  </div>
+  
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<!-- End Accept JS -->
+
+<!-- Begin Aceept UI -->
+<div id="acceptui" class="acceptuiCont productCont container" style="width: 800px;">
+  <header>
+      <p class="shop">ACCEPT UI</p>
+    </header>
+    <div class="row subCont">
+  <div class="alert alert-success" id="alertUI">
+      <p id="noteUI" class="hideElement">Thank you! Your order has been successfully placed.</p>
+            <span id="msgUI"></span>
+          </div>
+ <div class="shopping-cart order" style="height: 500px;width: 450px;">
+
+    <div class="title">
+      Order Summary
+    </div>
+   
+    <div style="opacity:0.5"></div>
+    <div class="item" style="
+    margin-bottom: 30px;
+">
+      <div class="image">
+        <img src="images/spects.jpg" alt="">
+      </div>
+      <div class="description">
+        <span>Sun Protection Goggles</span>
+        <span>Black</span>
+      </div>
+      <div class="total-price">
+        1x$19.99
+      </div>
+      <div class="total-price amount">$19.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image" style="
+    width: 50px;
+">
+        <img src="images/bag.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Backpack</span>
+        <span>Blue</span>
+      </div>
+      <div class="total-price" style="
+    width: 85px;
+">
+        1x$22.99
+      </div>
+      <div class="total-price amount" style="
+    width: 85px;
+">$22.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/jacket.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Men's Leather Jacket</span>
+        <span>Brown</span>
+      </div>
+      <div class="total-price">
+        1x$33.99
+      </div>
+      <div class="total-price amount">$33.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/shoes.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Sports Shoes</span>
+        <span>White</span>
+      </div>
+      <div class="total-price">
+        1x$22.99
+      </div>
+      <div class="total-price amount">$22.99</div>
+    </div>
+    <!--added by Dinesh-->
+    <hr class="hrTotal">
+    <!--added by Dinesh-->
+    <div class="item divtotal">
+    <div class="total-pri lbltotal" style="margin-left: 175px;">Total</div>
+    <div class="total-pri amtTotal" style="margin-left: 20px;">$99.96</div>
+  </div>
+  
+</div>
+<form id="paymentForm" method="POST">
+ <input type="hidden" name="dataValue" id="dataValue" />
+ <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+<div class="btnsUI">
+ <button type="button"
+ class="AcceptUI btn btn-primary btnpay" id="btnAcceptUI"
+ data-billingAddressOptions='{"show":true, "required":false}'
+ data-acceptUIFormBtnTxt="Submit"
+ data-acceptUIFormHeaderTxt="Card Information"
+ data-responseHandler="responseHandler">Pay
+</button>
+<button class="btn btn-primary btncancel"><a href="index_all.html">Cancel</a>
+</button>
+</div>
+</form> 
+</div>
+</div>
+<!-- End Accept UI -->
+
+<!-- Begin Accept Hosted -->
+<div id="acceptHosted" class="acceptHostedCont productCont container" style="background-color: white;font-family: Century Gothic, Regular;
+    font-weight: 700 !important;
+    color: #666666">
+<header>
+      <p class="shop">ACCEPT HOSTED</p>
+    </header>
+<div class="row subCont">
+  <div class="alert alert-success" id="alertHS">
+        <p id="noteHS" class="hideElement">Thank you! Your order has been successfully placed.</p>
+            <span id="msgHS"></span>
+  </div>
+<div class="col-md-6">
+  <div class="shopping-cart paymentCont">
+          <div class="title txtLeft">
+            Payment Details
+          </div>
+          
+          <div class="paymentDiv" style="border: none;">
+  <iframe id="load_payment" class="embed-responsive-item" name="load_payment"  frameborder="0" scrolling="yes" hidden="true">
+  </iframe>
+
+  <form id="send_hptoken" method="post" target="load_payment" >
+    <input type="hidden" name="token" id="hostedtoken" value="" />
+  </form>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+ <div class="shopping-cart order" style="height: 500px;width: 450px;">
+
+    <div class="title">
+      Order Summary
+    </div>
+   
+    <div style="opacity:0.5"></div>
+    <div class="item" style="
+    margin-bottom: 30px;
+">
+      <div class="image">
+        <img src="images/spects.jpg" alt="">
+      </div>
+      <div class="description">
+        <span>Sun Protection Goggles</span>
+        <span>Black</span>
+      </div>
+      <div class="total-price">
+        1x$19.99
+      </div>
+      <div class="total-price amount">$19.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image" style="
+    width: 50px;
+">
+        <img src="images/bag.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Backpack</span>
+        <span>Blue</span>
+      </div>
+      <div class="total-price" style="
+    width: 85px;
+">
+        1x$22.99
+      </div>
+      <div class="total-price amount" style="
+    width: 85px;
+">$22.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/jacket.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Men's Leather Jacket</span>
+        <span>Brown</span>
+      </div>
+      <div class="total-price">
+        1x$33.99
+      </div>
+      <div class="total-price amount">$33.99</div>
+    </div>
+    <div class="item" style="margin-bottom: 30px;">
+      <div class="image">
+        <img src="images/shoes.jpg" alt="">
+      </div>
+      <div class="description" style="
+    width: 150px;
+">
+
+        <span>Sports Shoes</span>
+        <span>White</span>
+      </div>
+      <div class="total-price">
+        1x$22.99
+      </div>
+      <div class="total-price amount">$22.99</div>
+    </div>
+    <!--added by Dinesh-->
+    <hr class="hrTotal">
+    <!--added by Dinesh-->
+    <div class="item divtotal">
+    <div class="total-pri lbltotal" style="margin-left: 175px;">Total</div>
+    <div class="total-pri amtTotal" style="margin-left: 20px;">$99.96</div>
+  </div>
+  
+</div>
+</div>
+</div>
+</div>
+<!-- End Accept Hosted -->
+
+<!-- Begin Accept Customer -->
+<div id="acceptCustomer" class="acceptCustomerCont productCont container">
+<header>
+      <p class="shop">ACCEPT CUSTOMER</p>
+    </header>
+<div class="row subCont">
+  <div class="alert alert-success" id="alertCS">
+        <p id="noteCS" class="hideElement">Thank you! Your order has been successfully placed.</p>
+            <span id="msgCS"></span>
+  </div>
+  <input type="hidden" name="isvalidated" id="isvalidated" value="no">
+  <div class="shopping-cart paymentCont">
+         
+          <div class="paymentDiv" style="border: none;">
+  <iframe id="load_profile" class="embed-responsive-item" name="load_profile"  frameborder="0" scrolling="yes" hidden="true">
+  </iframe>
+
+  <form id="send_token" method="post" target="load_profile" >
+    <input type="hidden" name="token" id="custtoken" value="" />
+  </form>
+</div>
+</div>
+</div>
+</div>
+<!-- End Accept Customer -->
+
+
+<script src="constants.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript"
+src="https://jstest.authorize.net/v3/AcceptUI.js"
+charset="utf-8"></script>
+</body>
+</html> 

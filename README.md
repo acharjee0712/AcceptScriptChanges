@@ -49,14 +49,30 @@ Below URLs are used to submit form with token value inorder to load the payment 
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
 * ClientKey 
+![Image of clientKey](Github-Images/clientKey.PNG)
+
 * ApiLoginID
+![Image of apiLogin](Github-Images/apiLogin.PNG)
+
 * ApiTransactionKey
-![Image of keys](Github-Images/keys.PNG)
+![Image of apiTransactionKey](Github-Images/apiTransactionKey.PNG)
 
-The IframeCommunicator page acts as a medium to communicate with the iframe and our page.
 
-* IFrameCommunicatorUrl : Path to IframeCommunicator page. 
-![Image of IframeCommunicator](Github-Images/IframeCommunicator.PNG)
+### Create Website on IIS
+
+*	Open IIS as Administrator.
+
+*	Right click on sites and select “Add Website”. 
+
+*	Provide Site name and physical path to the app’s deployment folder(C:\inetpub\wwwroot\Publish)
+
+*	Choose https binding.
+
+* 	Select SSL Certificate from drop down.
+
+*   Click OK.
+
+	![Add-Website](Github-Images/Add-Website.png)
 
 ## browse the website
 
