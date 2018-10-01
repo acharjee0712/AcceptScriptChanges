@@ -13,6 +13,8 @@ function loadpage()
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
         for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+             document.getElementById("invalidPage").innerHTML="";
+       document.getElementById("invalidPage").innerHTML="Product Type not Found";
               document.getElementById("invalidProduct").style.display="block";
        }
        else
@@ -28,6 +30,8 @@ function loadpage()
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
         for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+             document.getElementById("invalidPage").innerHTML="";
+       document.getElementById("invalidPage").innerHTML="Product Type not Found";
               document.getElementById("invalidProduct").style.display="block";
        }
        else
@@ -54,12 +58,16 @@ function loadpage()
             else
             {
                for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+              document.getElementById("invalidPage").innerHTML="";
+              document.getElementById("invalidPage").innerHTML="Customer not Found";
               document.getElementById("invalidProduct").style.display="block";
             }
         }
         else
         {
           for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+              document.getElementById("invalidPage").innerHTML="";
+              document.getElementById("invalidPage").innerHTML="Product Type not Found";
               document.getElementById("invalidProduct").style.display="block";
             
         }
@@ -88,6 +96,8 @@ function loadpage()
             else
             {
                for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+              document.getElementById("invalidPage").innerHTML="";
+              document.getElementById("invalidPage").innerHTML="Customer not Found";
               document.getElementById("invalidProduct").style.display="block";
             }
 
@@ -101,9 +111,16 @@ function loadpage()
        }
     }
     else{
-
+       document.getElementById("invalidPage").innerHTML="";
+       document.getElementById("invalidPage").innerHTML="Product Type not Found";
       document.getElementById("invalidProduct").style.display="block";
     }
+  }
+  else
+  {
+    document.getElementById("invalidPage").innerHTML="";
+       document.getElementById("invalidPage").innerHTML="Product Type not Found";
+      document.getElementById("invalidProduct").style.display="block";
   }
 }
 
@@ -286,9 +303,8 @@ function AcceptCustomer(id)
            document.getElementById("send_token").setAttribute("action",globalVars.CustomerFormUrl);
             //Submit form with token to get iframe
             document.getElementById("send_token").submit();
-            document.getElementById("acceptCustomer").style.display="block";
             document.getElementById("load_profile").style.display="block";
-            
+            //document.getElementById("acceptCustomer").style.display="block";
       }
       else
       {
@@ -299,8 +315,9 @@ function AcceptCustomer(id)
               element.classList.remove("alert-success");
               element.classList.add("alert-danger");
               element.style.display="block";
-              document.getElementById("acceptCustomer").style.display="block";
+             // document.getElementById("acceptCustomer").style.display="block";
       }
+      document.getElementById("acceptCustomer").style.display="block";
     },
     error: function (jqXHR, textStatus, errorThrown) {
           document.getElementById("msgCS").innerHTML ="";
@@ -353,7 +370,7 @@ function validatePaymentFields()
    var cardNo = document.getElementById("cardNumber");
    var expMonth = document.getElementById("expMonth");
    var expYear = document.getElementById("expYear");
-
+   var currentYear= new Date();
        if(cardNo.value=="") 
          cardNo.classList.add("error");
        else
@@ -363,6 +380,11 @@ function validatePaymentFields()
        }
        if(expMonth.value=="")  
          expMonth.classList.add("error");
+       /*else if(expMonth.value==0 || expMonth.value>12 )
+       {
+         expMonth.classList.remove("error");
+         expMonth.classList.add("invalid");
+       }*/
        else
        {
          expMonth.classList.remove("error");
@@ -370,6 +392,11 @@ function validatePaymentFields()
        }
        if(expYear.value=="")  
          expYear.classList.add("error");
+       /*else if(expYear.value < currentYear.getFullYear().toString().substr(-2))
+       {
+         expMonth.classList.remove("error");
+         expMonth.classList.add("invalid");
+       }*/
        else
        {
           expYear.classList.remove("error");
@@ -465,6 +492,7 @@ function onTextInput(id)
    var masterCard=["51","52","53","54","55","2221","2222","2223"];
    var element = document.getElementById(id);
    var cardNumElem=document.querySelector('input[name="cardNumber"]');
+   var currentYear=new Date();
    if(element.value=="")
       {
         cardNumElem.classList.remove("icon-type-mastercard");
@@ -475,6 +503,7 @@ function onTextInput(id)
         cardNumElem.classList.remove("icon-type-visa");
       }
 
+  
    if(id == "cardNumber" && element.value!="")
     {
       
@@ -513,15 +542,55 @@ function onTextInput(id)
       }
     }
    //var element = document.getElementById(id);
-   if(element.value!="")
+   
+    if(id=="expMonth")
    {
+      var data=element.value;
+      if(!(data >= 1 && data<=12))
+      {
+        document.getElementById("expMonth").value="";
+          element.classList.remove("success");
+          element.classList.add("invalid");
+      }
+      else
+      {
+         if(element.value!="")
+         {
+           element.classList.remove("invalid");
+           element.classList.add("success");
+         }
+      }
+   }
+   /*else if(id=="expYear")
+   {
+    if(element.value < currentYear.getYear().toString().substr(-2))
+    {
+         element.classList.remove("success");
+          element.classList.add("invalid");
+    }
+    else
+      {
+         if(element.value!="")
+         {
+           element.classList.remove("invalid");
+           element.classList.add("success");
+         }
+      }
+   }*/
+   else
+   {
+    if(element.value!="")
+   {
+     element.classList.remove("invalid");
      element.classList.remove("error");
      element.classList.add("success");
    }
    else{
-    element.classList.remove("success");
+     element.classList.remove("invalid");
+     element.classList.remove("success");
      element.classList.add("error");
    }
+  }
 }
 
 //Send payment information on Pay click in Accept Js
@@ -601,7 +670,7 @@ function responseHandler(response) {
          {
             document.getElementById("dataDescriptor").value = response.opaqueData.dataDescriptor;
             document.getElementById("dataValue").value = response.opaqueData.dataValue;
-            
+            document.getElementById("alertUI").style.display="none";
             var tokenVal=document.getElementById("dataValue").value;
             // Ajax call for API by passing token
               $.ajax({
@@ -737,6 +806,7 @@ function paymentFormUpdate(opaqueData) {
              document.getElementById("orderIDJS").innerHTML=data.successValue;
              document.getElementById("orderDateJS").innerHTML=currentdate;
              document.getElementById("cartJS").style.display="none";
+             document.getElementById("paymentDivJS").style.display="none";
              document.getElementById("confirmDivJS").style.display="block";
              //document.getElementById("msg").innerHTML ="Order confirmation number: "+data.successValue;
             }
@@ -786,32 +856,27 @@ function parseQueryString(str) {
     }
     return vars;
   }
+  
 CommunicationHandler.onReceiveCommunication = function (argument) {
     params = parseQueryString(argument.qstr)
     parentFrame = argument.parent.split('/')[4];
     frame = null;
     switch(parentFrame){
       case "manage"     : frame = document.getElementById("load_profile");break;
-      //case "addPayment"   : $frame = $("#add_payment");break;
-     // case "addShipping"  : $frame = $("#add_shipping");break;
-     // case "editPayment"  : $frame = $("#edit_payment");break;
-      //case "editShipping" : $frame = $("#edit_shipping");break;
       case "payment"    : frame = document.getElementById("load_payment");break;
     }
 
     switch(params['action']){
       case "resizeWindow"   :   if( parentFrame== "manage" && parseInt(params['height'])<1150)
                          {
-                        params['height']=450;
+                        //params['height']=450;
                         //params['width']=800;
                       }
                     if( parentFrame== "payment" && parseInt(params['height'])<1000) 
                       {
-                        params['height']=430;
-                        //params['width']=400;
+                        //params['height']=330;
+                        //params['width']=200;
                       }
-                    
-                    //if(parentFrame=="addShipping" && $(window).width() > 1021) params['height']= 350;
                     frame.height=parseInt(params['height']);
                     frame.width=parseInt(params['width']);
                     break;

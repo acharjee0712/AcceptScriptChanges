@@ -1,7 +1,9 @@
 var globalVars={
 
    ClientKey : '6C47PepC2NyJ2dgTy89U56xnan24H3cb363wxvBC5DP9Cjk5Fwp6b4q2YBnjU2Xp',
+   
    ApiLoginID : '78BZ5Xprry',
+   
    ApiTransactionKey  : '8s2F95Q7brhHd7Tn',
 
 

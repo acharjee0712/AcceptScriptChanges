@@ -1,7 +1,10 @@
 body
 {
-    background: url('scripts/background.png'); 
+    background: url('images/background_cloth.jpg'); 
     padding-top: 50px;
+   font-family:  Century Gothic,Regular!important;
+   /*background-size: 100%;*/
+   background-size: cover;
 }
 .productCont
 {
@@ -118,7 +121,7 @@ input[type='text']
         color: #86939E;
 }
 .alert{
-    margin: 20px 0 10px 5px;
+    /*margin: 20px 0 10px 5px;*/
     display: none;
 }
 .tblpayment {
@@ -184,12 +187,15 @@ direction: row;
 }
 
 /*added by Dinesh*/
-.alert{
+/*.alert{
     margin: 20px 0 10px 28px;
     display: none;
     width: 90%;
-}
+}*/
 .error{
+    border-color: #a94442;
+}
+.invalid{
     border-color: #a94442;
 }
 .success{
@@ -262,9 +268,31 @@ margin-right: 3px;
 .mrgB10{
     margin-bottom: 10px;
 }
+.mrgR10{
+    margin-right: 10px;
+}
+.mrgR8{
+ margin-right: 8px;
+}
+.paddingB10{
+    padding-bottom: 10px;
+}
 .w100{
     width: 100%;
 }
+.paddingR0{
+    padding-right: 0 !important;
+}
+.alertContUI{
+ margin:  0 auto;
+    float:  inherit;
+    /*padding-left: 26px;
+    padding-right: 3%;*/
+}
+.alertContHosted{
+    padding-left: 4%;
+    padding-right: 1%;
+    }
 .jumbotron{
      padding-right: 20px !important;
     color: inherit;
@@ -285,7 +313,7 @@ margin-right: 3px;
     font-size: 50px !important;
 }
 .center{
-    text-align: center;
+    text-align: center !important;
 }
 .details p{
    font-size: 14PX;
@@ -307,9 +335,13 @@ margin-right: 3px;
     margin: 0 auto;
     float: inherit;
 }
-#confirmDivUI{
+.confirmDiv{
     margin: 0 auto;
     float: inherit;
+}
+.alertCont{
+    padding-left: 5.5%;
+    padding-right: 6.5%;
 }
 /*For CARD icons*/
 .icon-type-visa{
@@ -367,3 +399,13 @@ margin-right: 3px;
 .error-template {padding: 40px 15px;text-align: center;}
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
+
+
+@media screen and (max-width:2000px){
+     
+    .col-md-4{
+        left: 65%;
+        float: right;
+        position: fixed;
+    }
+}

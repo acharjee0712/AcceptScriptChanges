@@ -14,11 +14,18 @@
 	<link href="scripts/bootstrap.min.css" rel="stylesheet">
  
 	<style type="text/css">
-		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;}
+	body{
+		 font-family:  Century Gothic,Regular!important;
+		 /*background: url('images/AdobeStock_191284997.jpeg'); */
+		 background: url('images/background_cloth.jpg');
+		 padding-top: 50px;
+		 background-size: 100%;
+	}
+		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;height: 58px;}
 		.nav>li {display: inline-block;}
 		.navbar-centered .nav > li > a {color: white}
-		.navbar-inverse { background-color: #555  } /* #7B7B7B */
-		.navbar-centered .nav > li > a:hover{ background-color: white; color: black }
+		.navbar-inverse { background-color: steelblue } /* #7B7B7B */
+		.navbar-centered .nav > li > a:hover{ background-color: white; color: steelblue; }
 		.navbar-centered .nav .active > a,.navbar-centered .navbar-nav > .active > a:focus { background-color: white; color: black; font-weight:bold; }
 		.navbar-centered .navbar-nav { float: none; text-align: center; }
 	    .navbar-centered .navbar-nav > li { float: none; }
@@ -41,7 +48,9 @@
 	    	.modal-dialog { width: 850px}
 	    	#add_shipping { height: 300px }
 	    }
-		
+		.navbar{
+			border-radius: 2px;
+		}
 	.productTypes>li
 	{
     padding-right: 35px;
@@ -114,10 +123,7 @@
 		margin-top: 7px;
 		font-size: 16px;
 	}
-	h6
-	{
-		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	}
+	
 	.modal-footer .btn
 	{
 		padding: 3px 6px;
@@ -127,8 +133,13 @@
 		margin-top: 12px;
 		padding-left: 1.5%;
 	}
+	.center{
+      text-align: center !important;
+    }
+    .paddingB10{
+    padding-bottom: 10px;
+}
 	</style>
-
 	<script src="scripts/jquery-2.1.4.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/jquery.cookie.js"></script>
@@ -140,15 +151,15 @@
 	<script src="https://includestest.ccdc02.com/cardinalcruise/v1/songbird.js"></script>
 </head>
 
-<body style=" background: url('scripts/background.png'); padding-top: 50px;">
+<body>
 	
 	<div class="container-fluid" style="width: 100%; margin: 0; padding:0">
 		
 		<div class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid navbar-centered">
-				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto">
-					<li><a href="index.html?producttype=acceptjs">Accept JS</a></li>
-					<li><a href="index.html?producttype=acceptui">Accept.Js UI</a></li>
+				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto;padding-top: 2px;">
+					<li><a href="index.html?producttype=acceptjs">Accept.js</a></li>
+					<li><a href="index.html?producttype=acceptui">Accept.js UI</a></li>
 					<li><a href="index.html?producttype=accepthosted">Accept Hosted</a></li>
 					<li><a href="#" onclick="ShowModal()" data-toggle="modal" data-target="#customerId">Accept Customer</a></li>
 				</ul>
@@ -158,7 +169,7 @@
 
    <div class="tab-content panel-group">
 		<div class="" id="home" align="center" >
-	      “Our cuisine is handmade with fresh organic and fair-trade spices for an aromatic and succulent dining experience.”
+	      <!-- “Our cuisine is handmade with fresh organic and fair-trade spices for an aromatic and succulent dining experience.” -->
 	    </div>
 	</div>
 
@@ -168,7 +179,6 @@
 			<div class="modal-content">
 				<div class="modal-header">
 
-					<button type="button" class="close" data-dismiss="modal">X</button>
 					<h4 class="modal-title" style="text-align: center;font-weight: 600;">Accept Customer</h4>
 				</div>
 				<div class="modal-body col-xs-12">
@@ -179,13 +189,15 @@
 					<a href="javascript:void(0);" title="Click here to check for different options to create Customer ID" onclick="showInfo()"><span class="glyphicon glyphicon-info-sign" id="info" ></span></a>
 					<div class="scenario" id="idScenarios">
 					    <h6>
-					    	<strong>Option 1</strong>- Use the existing customer profile ID, which is provided in the sample application documentation. 
+					    	<!-- <strong>Option 1</strong>-  -->Use the existing customer profile ID, which is provided in the sample application documentation. 
 					    </h6>
+					    <h6 class="paddingB10 center">(or)</h6>
 					    <h6>
-					    	<strong>Option 2</strong>- Create new customer profile ID using <a href="https://developer.authorize.net/api/reference/#customer-profiles-create-customer-profile" target="_blank">Dev center</a> by calling CreateCustomerProfile API with default sandbox login credentials.
+					    	Create new customer profile ID using <a href="https://developer.authorize.net/api/reference/#customer-profiles-create-customer-profile" target="_blank">Dev Center</a> by calling CreateCustomerProfile API with default Sandbox login credentials.
 					    </h6>
+					    <h6 class="paddingB10 center">(or)</h6>
 					    <h6>
-					    	<strong>Option 3</strong> - Create new customer profile ID using <a href="https://developer.authorize.net/api/reference/#customer-profiles-create-customer-profile" target="_blank">Dev center</a> by calling CreateCustomerProfile API with developer owned(existing or create new) sandbox login credentials. 
+					    	Create new customer profile ID using <a href="https://developer.authorize.net/api/reference/#customer-profiles-create-customer-profile" target="_blank">Dev Center</a> by calling CreateCustomerProfile API with developer owned(existing or create new) Sandbox login credentials. 
 					    </h6>
 					 </div>
 					 <div class="msgDiv">

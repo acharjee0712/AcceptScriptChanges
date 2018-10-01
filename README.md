@@ -1,12 +1,18 @@
-# Accept Suite Integration
+# Accept Suite Integration with .Net Core WEB API
 
-## Prerequisite:
-*	Windows 10 Professional
-*	Sublime Text or any editor of your choice.
-*	Internet Information Services 10
+One Paragraph of project description goes here
 
-## Product type description.
+## Getting Started
 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+## Pre-requisites to work on donet Authorize.Net suite
+
+The below are the pre-requisites .
+*	Windows 10 professional
+*	Internet information services 10
+
+## Very detailed explanation of each product type.
 Authorized.Net Accept suite has below products.
 *	Accept JS
 *	Accept UI
@@ -20,60 +26,40 @@ https://developer.authorize.net/api/reference/features/accept_hosted.html
 https://developer.authorize.net/api/reference/features/customer_profiles.html#Using_the_Accept_Customer_Hosted_Form
 
 ## Integration
+Constants.js file consists of required URLs that are used for WEB API calls and constant parameters that are used throughout the application.
 
-* Clone the Repository or Download the source code to local folder.
-
-### Constants File Description
-
-* Constants.js file contains Parameters that are used in the application.
-
-The URLs should be provided with IP address and API service site port number in the following format.
-
-https://IPAddress:PortNumber/api/AcceptSuite/ApiMethodName
-
-Find the below screenshots for refrence.
+Below are the URLs that are passed as parameters in script through Ajax calls to invoke the respective WEB API. For this the web service application should be hosted locally and IP address has to be provided in the URL path. 
 
 * AcceptJSRequestUrl : URL to invoke Accept JS web service on payment.
 ![Image of AcceptJSRequestUrl](Github-Images/AcceptJSRequestUrl.PNG)
-
 * AcceptHostedRequestUrl : URL to get the token value for Accept Hosted.
 ![Image of HostedRequestUrl](Github-Images/HostedRequestUrl.PNG)
-
 * AcceptCustomerRequestUrl : URL to get the token value for Accept Customer.
 ![Image of CustomerRequestUrl](Github-Images/CustomerRequestUrl.PNG)
-
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validated customer ID.
-![Image of ValidateCustomerUrl](Github-Images/ValidateCustomerUrl.PNG) 
+![Image of ValidateCustomerUrl](Github-Images/ValidateCustomerUrl.PNG)
+ 
+Below URLs are used to submit form with token value inorder to load the payment form.
 
+* HostedFormUrl : Used for Accept Hosted form.
+![Image of HostedFormUrl](Github-Images/HostedFormUrl.PNG)
+* CustomerFormUrl : Used for Accept Customer form.
+![Image of CustomerFormUrl](Github-Images/CustomerFormUrl.PNG)
  
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
 * ClientKey 
-
-![Image of keys](Github-Images/clientKey.PNG)
-
 * ApiLoginID
-
-![Image of keys](Github-Images/apiLogin.PNG)
-
 * ApiTransactionKey
+![Image of keys](Github-Images/keys.PNG)
 
-![Image of keys](Github-Images/apiTransactionKey.PNG)
+The IframeCommunicator page acts as a medium to communicate with the iframe and our page.
 
+* IFrameCommunicatorUrl : Path to IframeCommunicator page. 
+![Image of IframeCommunicator](Github-Images/IframeCommunicator.PNG)
 
+## browse the website
 
-### Steps to create Website on IIS
+Sample URL: https://10.173.192.248:5008/index_all.html
 
-*	Open IIS as Administrator.
-
-*	Right click on sites and select “Add Website”. 
-
-*	Provide Site name and physical path to the app’s deployment folder(C:\inetpub\wwwroot\Publish)
-
-*	Choose https binding.
-
-* 	Select SSL Certificate from drop down.
-
-*   Click OK.
-
-	![Image of Add-Website](Github-Images/iisSite.PNG)
+![Image of dashboard](Github-Images/dashboard.PNG)
