@@ -6,11 +6,10 @@ One Paragraph of project description goes here
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Pre-requisites to work on donet Authorize.Net suite
-
-The below are the pre-requisites .
-*	Windows 10 professional
-*	Internet information services 10
+## Prerequisite:
+*	Windows 10 Professional
+*	Sublime Text or any editor of your choice.
+*	Internet Information Services 10
 
 ## Very detailed explanation of each product type.
 Authorized.Net Accept suite has below products.
@@ -28,7 +27,9 @@ https://developer.authorize.net/api/reference/features/customer_profiles.html#Us
 ## Integration
 Constants.js file consists of required URLs that are used for WEB API calls and constant parameters that are used throughout the application.
 
-Below are the URLs that are passed as parameters in script through Ajax calls to invoke the respective WEB API. For this the web service application should be hosted locally and IP address has to be provided in the URL path. 
+
+The URLs should be provided with IP address and API service site port number in the following format.
+https://IPAddress:PortNumber/api/AcceptSuite/<ApiMethodName>
 
 * AcceptJSRequestUrl : URL to invoke Accept JS web service on payment.
 ![Image of AcceptJSRequestUrl](Github-Images/AcceptJSRequestUrl.PNG)
