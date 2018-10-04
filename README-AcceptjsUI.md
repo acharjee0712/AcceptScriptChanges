@@ -2,26 +2,25 @@
 
 In this we embed the built-in ANET hosted form in our application to capture and send sensitive payment information directly to Authorize.Net.
 
-##Workflow
+## Workflow
 
-By default shopping cart information is displayed on the page. A Pay button is defined on the page and when the customer clicks the button a pop up with built-in hosted Payment form is opened. 
-There is a predefined angular directive for button, just need fill the values for button.
+Shopping cart information is displayed on the page by default. A Pay button is defined on the page and when the customer clicks the button a pop up with built-in hosted Payment form is opened. 
+There is a predefined angular directive for the button, we just need to fill the values for button.
 
-[button image]
+![Image of AcceptUIButton](Github-Images/AcceptUIButton.PNG)
 
-[pop up image]
+Below is the screenshot of existing payment form for Accept.js with UI.
 
-The customer fills the payment information in the form, and clicks the pay button.The Accept script sends the payment information directly to Authorize.Net and receives a payment nonce. The script passes the payment nonce to the response handler function for the button which we have defined and
-from response handler function we will receive the payment nonce/token.
+![Image of AcceptUIPopUp](Github-Images/AcceptUIPopUp.PNG)
 
-[image]
+The customer fills the payment information in the form, and clicks the pay button.The Accept script sends the payment information directly to Authorize.Net and receives a payment nonce. 
 
-After receiving the payment nonce / token, we will pass this token along with other non payment details to the AcceptJSRequestUrl web API.
+The script passes the payment nonce to the response handler function for the button which we have defined and from response handler function we will receive the payment nonce/token.
 
-Accept JS plugin has been developed by the VISA Team and Dispatch Data functionality is already present in that plugin. Accept.js extracts the payment details from customer’s form and sends them directly from the customer's web browser to Authorize.Net, which returns a payment nonce/token.
+After receiving the payment nonce / token, we will pass this token along with other non payment details to the web API through Ajax call passing AcceptJSRequestUrl as parameter.
 
-[image]
+![Image of AcceptUIRequest](Github-Images/AcceptUIRequest.PNG)
 
-After receiving the payment nonce / token, we will pass this token and other required details to AcceptJSRequestUrl web API. Based on the response code whether Success / Failed we will read the response and will display the confirmation page on the screen.
+Based on the response code whether Success / Failed we will read the response and will display the confirmation page on the screen.
 
-[image]
+![Image of ConfirmationPage](Github-Images/ConfirmationPage.PNG)
