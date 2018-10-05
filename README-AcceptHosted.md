@@ -29,15 +29,23 @@ https://10.173.192.248:5008/index.html?ProductType=AcceptHosted&CustomerId=18132
 
 ## Workflow
 
-1.  On loading of the page, there are two cases to be checked.
+Step 1 : On loading of the page, there are two cases to be checked.
 
 * The page request contains Customer ID in the URL. 
 * The page request does not provide Customer ID in the URL. 
 
 ### Case 1 : 
 
-If customer ID is passed in the request URL then first the customer ID is validated. If it is a valid customer ID then only the AcceptHosted method is called. 
+If customer ID is passed in the request URL then first the customer ID is validated by making an Ajax call to a web API to the URL ValidateCustomerRequestUrl in constants file. 
+
+![Image of ValidateCustomer](Github-Images/ValidateCustomer.PNG)
+
+If it is a valid customer ID then only the AcceptHosted method is called. 
 If the customer ID is not valid we will display the error message on the screen.
+
+![Image of InvalidCustomer](Github-Images/InvalidCustomer.PNG)
+
+On click of Back to Home Page button, the page will be redirected to dashboard page.
 
 ### Case 2 : 
 
@@ -48,15 +56,15 @@ As a response token is received.
 
 iFrameCommunicatorUrl is also passed through Ajax, which will be explained in detail further.
 
-2. A iframe is defined in the HTML which is used to embed the Accept Hosted payment form in the web page. 
+Step 2 : A iframe is defined in the HTML which is used to embed the Accept Hosted payment form in the web page. 
 
 ![Image of hostedIframe](Github-Images/hostedIframe.PNG)
 
-3.A form is also defined in the HTML with target ID of the above iframe. This form contains an input field for token. The action URL of the form is HostedFormUrl in constants file which is defined dynamically on loading the Accept Hosted page.
+Step 3 : A form is also defined in the HTML with target ID of the above iframe. This form contains an input field for token. The action URL of the form is HostedFormUrl in constants file which is defined dynamically on loading the Accept Hosted page.
 
 ![Image of hostedForm](Github-Images/hostedForm.PNG)
 
-3. After receiving the token, the form is submitted by passing the received token to the input in the form.
+Step 4 : After receiving the token, the form is submitted by passing the received token to the input in the form.
 When the form is posted, the hosted payment form is automatically displayed on the screen.
 
 ![Image of HostedPaymentForm](Github-Images/HostedPaymentForm.PNG)

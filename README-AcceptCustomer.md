@@ -30,27 +30,32 @@ There is an information icon beside the input field, on click of it the scenario
 
 After providing the customer ID and click on Continue button, background script will be executed.
 
-First the customer ID will be validated. An Ajax call is made by passing the provided customer ID to the web API for validating the ID.  
+First the customer ID will be validated. An Ajax call is made by passing the provided customer ID to the web API to the URL ValidateCustomerRequestUrl in constants file for validating the ID.  
 
-![Image of hostedForm](Github-Images/hostedForm.PNG)
+![Image of ValidateCustomer](Github-Images/ValidateCustomer.PNG)
+
+On loading the page by directly providing the query strings in URL also, it first validates the customer ID parameter in the URL. If it is valid
+then only the page is loaded.
 
 If it is not a valid customer, then an error message is displayed on the screen.
 
-![Image of hostedForm](Github-Images/hostedForm.PNG)
+![Image of InvalidCustomer](Github-Images/InvalidCustomer.PNG)
+
+On click of Back to Home Page button, the page will be redirected to dashboard page.
 
 If it is a valid customer, then AcceptCustomer method is invoked.
 In this an Ajax call is made to the web API by passing the required parameters like customer ID, apiLoginId and apiTransactionKey.IframeCommunicator URL is also passed in Ajax for communicating between the hosted form and the web page.
 As a response we will get the token value. 
 
-![Image of hostedForm](Github-Images/hostedForm.PNG)
+![Image of AcceptCustomerAjax](Github-Images/AcceptCustomerAjax.PNG)
 
 A iframe is defined in the HTML which is used to embed the hosted payment form in the web page. 
 
-![Image of hostedIframe](Github-Images/hostedIframe.PNG)
+![Image of CustomerIframe](Github-Images/CustomerIframe.PNG)
 
 A form is also defined in the HTML with target ID of the above iframe. This form contains an input field for token. The action URL of the form is CustomerFormUrl in constants file which is defined dynamically on loading the Accept Customer page.
 
-![Image of hostedForm](Github-Images/hostedForm.PNG)
+![Image of CustomerForm](Github-Images/CustomerForm.PNG)
 
 After receiving the token, the form is submitted by passing the received token to the input in the form.
 When the form is posted, the hosted payment form is automatically displayed on the screen.
