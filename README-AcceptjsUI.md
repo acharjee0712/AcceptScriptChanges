@@ -29,7 +29,7 @@ Shopping cart information with static content is displayed initially on the page
 
 On click of Cancel button, the page will be redirected to dashboard page.
 
-The Pay button is defined on the page inside a form and when the customer clicks on the button a pop up with built-in hosted Payment form is opened. 
+The Pay button is defined on the page inside a form and when the customer clicks on the button the payment form will be displayed. 
 
 ![Image of AcceptUIButton](Github-Images/AcceptUIButton.PNG)
 

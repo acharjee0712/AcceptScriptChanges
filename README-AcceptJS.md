@@ -64,7 +64,7 @@ When click on Pay button in the payment form, sendPaymentDataToAnet function is 
 In this function, based on the selection of payment type between Credit card and Bank Account, Accept.js extracts the payment details from customer’s form as an object named secureData and sends them directly from the customer's web browser.
 A response handler function is also written to handle the response of Dispatch Data which returns payment nonce or token.
 
-Accept JS plugin has been developed by the VISA Team and Dispatch Data functionality is already present in that plugin. 
+Accept JS plugin is an existing plugin and Dispatch Data functionality is already present in that plugin. 
 
 The payment data object and response handler function are passed to Authorize.Net using Dispatch Data functionality. 
 

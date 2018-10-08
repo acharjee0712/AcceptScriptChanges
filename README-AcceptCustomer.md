@@ -2,7 +2,7 @@
 
 Accept Customer is a fully hosted payment information that allows the creation of customer profile, payment profile and shipping profile with hosted functionality. 
 
-The functionality for Accept.js is written in pure JavaScript and pages are designed using Bootstrap classes.
+The functionality for Accept Customer is written in pure JavaScript and pages are designed using Bootstrap classes.
 
 ## Accessing Accept Customer Page
 
