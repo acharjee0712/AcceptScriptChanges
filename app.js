@@ -13,9 +13,10 @@ function loadpage()
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
         for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+             //Show on invalid page request
              document.getElementById("invalidPage").innerHTML="";
-       document.getElementById("invalidPage").innerHTML="Product Type not Found";
-              document.getElementById("invalidProduct").style.display="block";
+             document.getElementById("invalidPage").innerHTML="Product Type not Found";
+             document.getElementById("invalidProduct").style.display="block";
        }
        else
        {
@@ -30,8 +31,9 @@ function loadpage()
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
         for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+             //Show on invalid page request
              document.getElementById("invalidPage").innerHTML="";
-       document.getElementById("invalidPage").innerHTML="Product Type not Found";
+             document.getElementById("invalidPage").innerHTML="Product Type not Found";
               document.getElementById("invalidProduct").style.display="block";
        }
        else
@@ -56,7 +58,7 @@ function loadpage()
               AcceptHosted(id);
             }
             else
-            {
+            {  //For invalid customer
                for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Customer not Found";
@@ -64,7 +66,7 @@ function loadpage()
             }
         }
         else
-        {
+        { //For invalid product type
           for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Product Type not Found";
@@ -80,12 +82,16 @@ function loadpage()
     else if(product=="acceptcustomer")
     {
       activeCont="acceptcustomer";
+      
+       document.getElementById("txtCustomerId").value="1813212446";
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
+        document.getElementById("acceptCustomer").style.display="none";
         //to get customer id from url 
          var id = getParameterByName('customerid',window.location.href.toLowerCase());
-         //if id is provided directly in url and loaded
+         //if id is provided directly in url AS query string instead of going through the accept customer pop up
          var customerIdValidationStatus = sessionStorage.getItem('isValidated');
+         //if customer id is not validated before
          if(customerIdValidationStatus!="true")
          {
             var result= ValidateCustomer(id);
@@ -94,7 +100,7 @@ function loadpage()
               AcceptCustomer(id);
             }
             else
-            {
+            {//For invalid customer
                for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Customer not Found";
@@ -102,15 +108,19 @@ function loadpage()
             }
 
          }
-         //if it is already validated in lading page
+         //if it is already validated in dashboard page
          else
          {
             AcceptCustomer(id);
             sessionStorage.setItem('isValidated', 'false');
          }
        }
+       else{
+        document.getElementById("acceptCustomer").style.display="block";
+       }
     }
     else{
+      //For invalid product type
        document.getElementById("invalidPage").innerHTML="";
        document.getElementById("invalidPage").innerHTML="Product Type not Found";
       document.getElementById("invalidProduct").style.display="block";
@@ -118,6 +128,7 @@ function loadpage()
   }
   else
   {
+      //For invalid product type
     document.getElementById("invalidPage").innerHTML="";
        document.getElementById("invalidPage").innerHTML="Product Type not Found";
       document.getElementById("invalidProduct").style.display="block";
@@ -138,8 +149,8 @@ function getParameterByName(name, url) {
 function AcceptUI()
 {
      var form=document.getElementById("paymentForm");
-     form.setAttribute("action",globalVars.pageUrl);
-
+     form.setAttribute("action",globalVars.PageUrl);
+     //set values for accept UI button
      var ele=document.getElementById("btnAcceptUI");
      ele.setAttribute("data-apiLoginID",globalVars.ApiLoginID);
      ele.setAttribute("data-clientKey",globalVars.ClientKey);
@@ -160,21 +171,18 @@ function AcceptHosted(id)
     },
     contentType: "application/json; charset=utf-8",
     success: function (data, textStatus, jqXHR) {
-      if(data.status)
+      if(data.status)//if payment is succeeded
       {
-          /*document.getElementById("cartHosted").style.display="block";
-          document.getElementById("cartHosted").style.display="block";*/
-
            document.getElementById("hostedtoken").value=data.successValue;
            document.getElementById("send_hptoken").setAttribute("action",globalVars.HostedFormUrl);
             //submit form with token to get iframe
             document.getElementById("send_hptoken").submit();
             document.getElementById("acceptHosted").style.display="block";
             document.getElementById("load_payment").style.display="block";
-            
       }
       else
       {
+              //on failure, show error message
               document.getElementById("noteHS").style.display="none";
               document.getElementById("msgHS").innerHTML ="";
               document.getElementById("msgHS").innerHTML =data.errorMessage;
@@ -222,9 +230,12 @@ function Redirect()
    {
       if(result.status)
       {
-      window.location.href= "index.html?producttype=acceptcustomer&customerid="+customerId;
-      sessionStorage.setItem('isValidated', 'true');
-    }
+        // document.getElementById("acceptCustomerId").style.display = "none";
+        // document.getElementById("acceptCustomerManage").style.display = "block";
+        window.location.href= "index.html?producttype=acceptcustomer&customerid="+customerId;
+        //if Customer id is already validated
+        sessionStorage.setItem('isValidated', 'true');
+      }
     else
     {
           document.getElementById("invalidCustomer").style.display="inherit";
@@ -239,7 +250,7 @@ function Redirect()
 }
 }
 
-//To Validate customer
+//To Validate customer id
 function ValidateCustomer(id)
 {
      var customerId;
@@ -257,28 +268,28 @@ function ValidateCustomer(id)
     contentType: "application/json; charset=utf-8",
     success:function(data,textStatus,jqXHR){
       var valid;
-      if(data.status)
-   {
-     valid=true;
-   }
-   else
-   {
-     valid=false;
-   }
+      if(data.status)// if it is valid id
+      {
+       valid=true;
+     }
+     else
+     {
+       valid=false;
+     }
+     result={
+      valid:valid,
+      status:data.status,
+      message:data.errorMessage
+    };
+  },
+  error:function(data,textStatus,errorThrown){
     result={
-        valid:valid,
-        status:data.status,
-        message:data.errorMessage
-      };
-    },
-    error:function(data,textStatus,errorThrown){
-      result={
-        valid:false,
-        status:false,
-        message:textStatus
-      };
-    }
-  });
+      valid:false,
+      status:false,
+      message:textStatus
+    };
+  }
+});
   return result;
 }
 
@@ -297,17 +308,17 @@ function AcceptCustomer(id)
     },
     contentType: "application/json; charset=utf-8",
     success: function (data, textStatus, jqXHR) {
-      if(data.status)
+      if(data.status)//if payment is succeeded
       {
            document.getElementById("custtoken").value=data.successValue;
            document.getElementById("send_token").setAttribute("action",globalVars.CustomerFormUrl);
             //Submit form with token to get iframe
             document.getElementById("send_token").submit();
             document.getElementById("load_profile").style.display="block";
-            //document.getElementById("acceptCustomer").style.display="block";
       }
       else
-      {
+      {  
+              //on failure, show error message
               document.getElementById("noteCS").style.display="none";
               document.getElementById("msgCS").innerHTML ="";
               document.getElementById("msgCS").innerHTML =data.errorMessage;
@@ -315,9 +326,10 @@ function AcceptCustomer(id)
               element.classList.remove("alert-success");
               element.classList.add("alert-danger");
               element.style.display="block";
-             // document.getElementById("acceptCustomer").style.display="block";
       }
       document.getElementById("acceptCustomer").style.display="block";
+      document.getElementById("acceptCustomerId").style.display = "none";
+        document.getElementById("acceptCustomerManage").style.display = "block";
     },
     error: function (jqXHR, textStatus, errorThrown) {
           document.getElementById("msgCS").innerHTML ="";
@@ -330,6 +342,7 @@ function AcceptCustomer(id)
   });
 }
 
+//Show details on click of info icon in accept customer pop up
 function showInfo()
 {
   var display=document.getElementById("idScenarios").style.display;
@@ -380,11 +393,7 @@ function validatePaymentFields()
        }
        if(expMonth.value=="")  
          expMonth.classList.add("error");
-       /*else if(expMonth.value==0 || expMonth.value>12 )
-       {
-         expMonth.classList.remove("error");
-         expMonth.classList.add("invalid");
-       }*/
+      
        else
        {
          expMonth.classList.remove("error");
@@ -392,11 +401,7 @@ function validatePaymentFields()
        }
        if(expYear.value=="")  
          expYear.classList.add("error");
-       /*else if(expYear.value < currentYear.getFullYear().toString().substr(-2))
-       {
-         expMonth.classList.remove("error");
-         expMonth.classList.add("invalid");
-       }*/
+       
        else
        {
           expYear.classList.remove("error");
@@ -454,7 +459,7 @@ function validatePaymentFields()
    }
 
    var iserror=document.getElementById(sel).getElementsByClassName("error");
-   if(iserror.length>0)
+   if(iserror.length>0)//if an element with error class exists
    {
          document.getElementById("note").style.display="none";
          document.getElementById("msg").innerHTML ="";
@@ -541,12 +546,11 @@ function onTextInput(id)
         cardNumElem.classList.remove("icon-type-visa");
       }
     }
-   //var element = document.getElementById(id);
    
     if(id=="expMonth")
    {
       var data=element.value;
-      if(!(data >= 1 && data<=12))
+      if(!(data >= 1 && data<=12))//To check month in range 1-12
       {
         document.getElementById("expMonth").value="";
           element.classList.remove("success");
@@ -561,22 +565,7 @@ function onTextInput(id)
          }
       }
    }
-   /*else if(id=="expYear")
-   {
-    if(element.value < currentYear.getYear().toString().substr(-2))
-    {
-         element.classList.remove("success");
-          element.classList.add("invalid");
-    }
-    else
-      {
-         if(element.value!="")
-         {
-           element.classList.remove("invalid");
-           element.classList.add("success");
-         }
-      }
-   }*/
+   
    else
    {
     if(element.value!="")
@@ -596,8 +585,8 @@ function onTextInput(id)
 //Send payment information on Pay click in Accept Js
 function sendPaymentDataToAnet()
 {
-
   var isvalid=validatePaymentFields();
+  //if all fields are valid
   if(isvalid=="true")
   {
    var authData = {};
@@ -628,13 +617,15 @@ function sendPaymentDataToAnet()
     secureData.cardData = cardData;
    else
    secureData.bankData = bankData;
-   
+   //sanding payment data to dispatch method of built in accept JS
    Accept.dispatchData(secureData, responseHandler);
+   
  }
 }
 
 //Response handler for accept js and accept ui
 function responseHandler(response) {
+    //if errors occured
     if (response.messages.resultCode === "Error") {
         var i = 0;
         var container= document.getElementById("msg");
@@ -647,7 +638,7 @@ function responseHandler(response) {
         node = document.createTextNode("Error Details :");
         element.appendChild(node);
         container.appendChild(element);
-
+        //To display all errors occured
         while (i < response.messages.message.length) {
           var value=response.messages.message[i].code + ": " +
                 response.messages.message[i].text;
@@ -687,13 +678,11 @@ function responseHandler(response) {
                 
 
                       document.getElementById("msgUI").innerHTML ="";
-                      if(data.status)
+                      if(data.status)//if payment succeeded
                       {
                         //To disable pay button
                        document.getElementById("btnAcceptUI").disabled = true;
-                      // document.getElementById("noteUI").style.display="block";
-                       //document.getElementById("msgUI").innerHTML ="Order confirmation number: "+data.successValue;
-                      
+                       //To append current time and date in confirmation page
                        var currentdate = new Date();
                        document.getElementById("orderIDUI").innerHTML=data.successValue;
                        document.getElementById("orderDateUI").innerHTML=currentdate;
@@ -703,19 +692,15 @@ function responseHandler(response) {
                       }
                       else
                       {
+                        //on failure, show error message
                         document.getElementById("noteUI").style.display="none";
                         document.getElementById("msgUI").innerHTML=data.errorMessage;
-                         var element = document.getElementById("alertUI");
-                      if(data.status)
-                      {
-                        element.classList.remove("alert-danger");
-                        element.classList.add("alert-success");
-                      }
-                      else{
+                        var element = document.getElementById("alertUI");
+                      
                         element.classList.remove("alert-success");
                         element.classList.add("alert-danger");
-                      }
-                      element.style.display="block";
+                      
+                        element.style.display="block";
 
                       }
                   },
@@ -743,8 +728,6 @@ function paymentFormUpdate(opaqueData) {
     document.getElementById("dataDescriptor").value = opaqueData.dataDescriptor;
     document.getElementById("dataValue").value = opaqueData.dataValue;
 
-     
-     
     // If using your own form to collect the sensitive data from the customer,
     // blank out the fields before submitting them to your server.
     document.getElementById("cardNumber").value = "";
@@ -765,6 +748,7 @@ function paymentFormUpdate(opaqueData) {
         cardNumElem.classList.remove("icon-type-jcb");
         cardNumElem.classList.remove("icon-type-visa");
       }
+      //Remove all error and success classes for fields
    for(var i=0;i<rds.length;i++)
       rds[i].checked = false;
 
@@ -793,39 +777,28 @@ function paymentFormUpdate(opaqueData) {
     success: function (data, textStatus, jqXHR) {
             document.getElementById("msg").innerHTML ="";
              
-            if(data.status)
+            if(data.status)//if payment succeeded
             {
                //To disable pay button
               document.getElementById("btnPayJS").disabled = true;
-
-             // var message =  document.getElementById("note");
-              //message.textContent+=" Order confirmation number: "+data.successValue;
-             // document.getElementById("note").style.display="block";
-            
+              //To append current time and date in confirmation page
              var currentdate = new Date();
              document.getElementById("orderIDJS").innerHTML=data.successValue;
              document.getElementById("orderDateJS").innerHTML=currentdate;
              document.getElementById("cartJS").style.display="none";
              document.getElementById("paymentDivJS").style.display="none";
              document.getElementById("confirmDivJS").style.display="block";
-             //document.getElementById("msg").innerHTML ="Order confirmation number: "+data.successValue;
             }
             else
             {
+              //on failure, show error message
               document.getElementById("note").style.display="none";
               document.getElementById("msg").innerHTML=data.errorMessage;
             
               var element = document.getElementById("alert");
-            if(data.status)
-            {
-              element.classList.remove("alert-danger");
-              element.classList.add("alert-success");
-            }
-            else{
               element.classList.remove("alert-success");
               element.classList.add("alert-danger");
-            }
-            element.style.display="block";
+              element.style.display="block";
             }
             
         },
@@ -840,11 +813,13 @@ function paymentFormUpdate(opaqueData) {
   });
 }
 
+//To close accept customer pop up on cancel button click
 function CloseAcceptCustomer()
 {
   window.location.href="index_all.html";
 }
-//iframeCommunicator for accept hosted and accept customer
+
+//iframeCommunicator for accept hosted
 window.CommunicationHandler = {};
 function parseQueryString(str) {
     var vars = [];
@@ -856,7 +831,7 @@ function parseQueryString(str) {
     }
     return vars;
   }
-  
+//Methods for accept hosted iframes that executes on receiving message in iframeCommunicator
 CommunicationHandler.onReceiveCommunication = function (argument) {
     params = parseQueryString(argument.qstr)
     parentFrame = argument.parent.split('/')[4];
@@ -867,6 +842,7 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
     }
 
     switch(params['action']){
+      //To resize iframe
       case "resizeWindow"   :   if( parentFrame== "manage" && parseInt(params['height'])<1150)
                          {
                         //params['height']=450;
@@ -875,7 +851,7 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
                     if( parentFrame== "payment" && parseInt(params['height'])<1000) 
                       {
                         //params['height']=330;
-                        //params['width']=200;
+                        //params['width']=50;
                       }
                     frame.height=parseInt(params['height']);
                     frame.width=parseInt(params['width']);
@@ -885,33 +861,25 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
 
       case "cancel"       : 
                     switch(parentFrame){
-                   // case "addPayment"   : $("#send_token").attr({"action":baseUrl+"addPayment","target":"add_payment"}).submit(); $("#add_payment").hide(); break; 
-                   // case "addShipping"  : $("#send_token").attr({"action":baseUrl+"addShipping","target":"add_shipping"}).submit(); $("#add_shipping").hide(); $('#myModal').modal('toggle'); break;
                     case "manage"       : alert("manage");$("#send_token").attr({"action":baseUrl+"manage","target":"load_profile" }).submit(); break;
-                   // case "editPayment"  : $("#payment").show(); $("#addPayDiv").show(); break; 
-                   // case "editShipping" : $('#myModal').modal('toggle'); $("#shipping").show(); $("#addShipDiv").show(); break;
                     case "payment"    : window.location.href='index_all.html';break; //sessionStorage.removeItem("HPTokenTime"); $('#HostedPayment').attr('src','about:blank'); break; 
                     }
                     break;
-
+      //On successful payment in hosted
       case "transactResponse" : 
       var transResponse = JSON.parse(params['response']); 
             if( parentFrame== "payment") 
             {
+              //To hive payment and cart panels and show confirmation page
               document.getElementById("cartHosted").style.display="none";
               document.getElementById("hostedPayment").style.display="none";
+              //To append current time and date in confirmation page
               var currentdate = new Date();
              document.getElementById("orderIDHosted").innerHTML=transResponse.transId;
              document.getElementById("orderDateHosted").innerHTML=transResponse.dateTime;
               document.getElementById("confirmDivHosted").classList.add("hostedPage");
               document.getElementById("confirmDivHosted").style.display="block";
             }
-             /* 
-              document.getElementById("noteHS").style.display="block";
-              document.getElementById("msgHS").innerHTML ="Order confirmation number: "+transResponse.orderInvoiceNumber;
-              var element = document.getElementById("alertHS");
-              element.classList.remove("alert-danger");
-              element.classList.add("alert-success");
-              element.style.display="block";*/
+             
     }
   }

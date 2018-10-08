@@ -5,6 +5,7 @@ body
    font-family:  Century Gothic,Regular!important;
    /*background-size: 100%;*/
    background-size: cover;
+   background-attachment: fixed;
 }
 .productCont
 {
@@ -290,7 +291,7 @@ margin-right: 3px;
     padding-right: 3%;*/
 }
 .alertContHosted{
-    padding-left: 4%;
+    padding-left: 0;
     padding-right: 1%;
     }
 .jumbotron{
@@ -340,8 +341,8 @@ margin-right: 3px;
     float: inherit;
 }
 .alertCont{
-    padding-left: 5.5%;
-    padding-right: 6.5%;
+    /*padding-left: 5.5%;
+    padding-right: 6.5%;*/
 }
 /*For CARD icons*/
 .icon-type-visa{
@@ -400,19 +401,115 @@ margin-right: 3px;
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
 
+.alertAccepHost{
+    margin-left: 1.5%;
+    width: 99%;
+    margin-bottom: 1%;
+}
 
-@media screen and (max-width:2000px){
+
+@media screen and (max-width: 1024px){
      
+    .w100{
+        width: 86%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+     
+    .alertAccepHost{
+        margin-left: 1%;
+       
+    }
+}
+
+@media screen and (max-width: 1024px){
+     
+    iframe{
+        height: -webkit-fill-available;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1024px) and (min-width: 601px){
     .col-md-4{
-        left: 65%;
-        float: right;
         position: fixed;
+        left: 65%;
+        padding-left: 0;
+        padding-right: 0;
+        width: 33%;
     }
 }
 
-@media screen and (max-width:600px){
-     
-    .col-md-8 #framePayment{
-        width: 80%;
+@media screen and (max-width:2000px) and (min-width: 1025px) {
+   .col-md-4{
+        position: fixed;
+        left: 60%;
+        padding-left: 5%;
+        padding-right: 0;
     }
 }
+
+@media screen and (max-width:4000px) and (min-width: 2561px) {
+   .col-md-4{
+        position: fixed;
+        left: 50%;
+        padding-left: 5%;
+        padding-right: 0;
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:1920px) and (min-width:1367px) {
+   .col-md-4{
+        position: fixed;
+        left: 55%;
+        padding-left: 5%;
+        padding-right: 0;
+        width: 26%
+    }
+}
+
+@media screen and (max-width:1600px) and (min-width:1367px) {
+   .col-md-4{
+        position: fixed;
+        left: 57%;
+        padding-left: 5%;
+        padding-right: 0;
+        width: 30.5%
+    }
+}
+    
+
+@media screen and (max-width:600px) {
+   .col-md-4{
+        position: absolute;
+        left: 0;
+        padding-left: 0;
+    }
+}
+
+.scenario
+    {
+        padding-top: 8%;
+        padding-left: 1.5%;
+        display: none;
+    }
+
+    .msgDiv
+    {
+        /*margin-top: 12px;
+        padding-left: 3%;*/
+        margin-left: 2%;
+        width: 95%;
+    }
+
+    .invalidCustomerSpan{
+        padding: 0.5%;
+        display: none;
+        background-color: unset;
+        border: none;
+    }

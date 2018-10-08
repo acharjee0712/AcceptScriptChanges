@@ -20,6 +20,7 @@
 		 background: url('images/background_cloth.jpg');
 		 padding-top: 50px;
 		 background-size: 100%;
+		 background-attachment: fixed;
 	}
 		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;height: 58px;}
 		.nav>li {display: inline-block;}
@@ -70,8 +71,10 @@
     #home
 	{
 	display: block;
-    margin-top: 105px;
-        color: steelblue;
+    margin-top: 200px;
+    font-size: 20px;
+    color: #555;
+    font-weight: 600;
 	}
 	.textBox{
 		width: 35%;
@@ -140,6 +143,40 @@
     .paddingB10{
     padding-bottom: 10px;
 }
+.visa-ui-btn-text{
+  display: flex;
+    border-radius: 0;
+    cursor: pointer!important;
+    font-family: OpenSans,sans-serif;
+    font-size: .85714rem;
+    outline: 0;
+    transition: background .25s ease;
+    align-items: center;
+    /*background: #003ea9;*/
+    background: steelblue;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .05357rem;
+    margin: 0rem .35714rem .14286rem .35714rem;
+    min-height: 50px;
+    min-width: 165px;
+    padding: 0rem!important;
+    text-decoration: none;
+    margin-left: 25%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px -1px #333
+    /*text-transform: uppercase;*/
+}
+button:hover{
+	/*background-color: #052f52;*/
+	background: linear-gradient(steelblue,#052f52);
+	/*color: steelblue;*/
+}
+
+
 	</style>
 	<script src="scripts/jquery-2.1.4.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
@@ -156,21 +193,49 @@
 	
 	<div class="container-fluid" style="width: 100%; margin: 0; padding:0">
 		
-		<div class="navbar navbar-inverse" role="navigation">
+		<!-- <div class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid navbar-centered">
 				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto;padding-top: 2px;">
 					<li><a href="index.html?producttype=acceptjs">Accept.js</a></li>
 					<li><a href="index.html?producttype=acceptui">Accept.js UI</a></li>
 					<li><a href="index.html?producttype=accepthosted">Accept Hosted</a></li>
 					<li><a href="#" onclick="ShowModal()" data-toggle="modal" data-target="#customerId">Accept Customer</a></li>
+					<li><a href="index.html?producttype=acceptcustomer">Accept Customer</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
+     <div class="col-md-12" style="width: 90%;margin-left: 3%">
+     	<div class="col-md-3">
+		  <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=acceptjs" style="text-decoration-line: none;color: white;font-size:medium; ">Accept.js</a>
+          </button>
+         </div>
+         <div class="col-md-3">
+         	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=acceptui" style="text-decoration-line: none;color: white;font-size:medium; ">Accept.js UI</a>
+          </button>
+         </div>
+          <div class="col-md-3">
+          	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=accepthosted" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Hosted</a>
+          </button>
+          </div>
+          <div class="col-md-3">
+          	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=acceptcustomer" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Customer</a>
+          </button>
+          </div>
+     </div>
+		
+          
+
+
+		
     </div>
 
    <div class="tab-content panel-group">
 		<div class="" id="home" align="center" >
-	       “Select any of above Authorize.Net Accept suite product type to experience the ease of building websites and mobile applications using JavaScript libraries and hosted forms”
+	      “Select any of above Authorize.Net Accept suite product type to experience the ease of building websites and mobile applications without increasing PCI burden for merchants using our JavaScript libraries and hosted forms” 
 	    </div>
 	</div>
 
