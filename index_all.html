@@ -175,7 +175,19 @@ button:hover{
 	background: linear-gradient(steelblue,#052f52);
 	/*color: steelblue;*/
 }
-
+.containerDiv
+{
+	width: 100%; margin: 0; padding:0
+}
+.JSDiv{
+	width: 90%;margin-left: 3%;
+}
+.tabs{
+text-decoration-line: none !important;color: white !important;font-size:medium; 
+}
+.mTitle{
+text-align: center;font-weight: 600;
+}
 
 	</style>
 	<script src="scripts/jquery-2.1.4.min.js"></script>
@@ -183,16 +195,11 @@ button:hover{
 	<script src="scripts/jquery.cookie.js"></script>
 	<script src="app.js"></script>
 	<script src="constants.js"></script>
-	
-	
 	<script src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js"></script>
-	<script src="https://includestest.ccdc02.com/cardinalcruise/v1/songbird.js"></script>
+	<!-- <script src="https://includestest.ccdc02.com/cardinalcruise/v1/songbird.js"></script> -->
 </head>
-
 <body>
-	
-	<div class="container-fluid" style="width: 100%; margin: 0; padding:0">
-		
+	<div class="container-fluid containerDiv">
 		<!-- <div class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid navbar-centered">
 				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto;padding-top: 2px;">
@@ -204,48 +211,40 @@ button:hover{
 				</ul>
 			</div>
 		</div> -->
-     <div class="col-md-12" style="width: 90%;margin-left: 3%">
+     <div class="col-md-12 JSDiv">
      	<div class="col-md-3">
 		  <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptjs" style="text-decoration-line: none;color: white;font-size:medium; ">Accept.js</a>
+	          <a href="index.html?producttype=acceptjs" class="tabs">Accept.js</a>
           </button>
          </div>
          <div class="col-md-3">
          	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptui" style="text-decoration-line: none;color: white;font-size:medium; ">Accept.js UI</a>
+	          <a href="index.html?producttype=acceptui" class="tabs">Accept.js UI</a>
           </button>
          </div>
           <div class="col-md-3">
           	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=accepthosted" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Hosted</a>
+	          <a href="index.html?producttype=accepthosted" class="tabs">Accept Hosted</a>
           </button>
           </div>
           <div class="col-md-3">
           	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptcustomer" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Customer</a>
+	          <a href="index.html?producttype=acceptcustomer" class="tabs">Accept Customer</a>
           </button>
           </div>
      </div>
-		
-          
-
-
-		
     </div>
-
    <div class="tab-content panel-group">
 		<div class="" id="home" align="center" >
 	      “Select any of above Authorize.Net Accept suite product type to experience the ease of building websites and mobile applications without increasing PCI burden for merchants using our JavaScript libraries and hosted forms” 
 	    </div>
 	</div>
-
 	<div id="customerId" class="modal">
 	<div class="modal-align-center-helper">
 		<div class="modal-dialog modal-align-center">
 			<div class="modal-content">
 				<div class="modal-header">
-
-					<h4 class="modal-title" style="text-align: center;font-weight: 600;">Accept Customer</h4>
+					<h4 class="modal-title mTitle">Accept Customer</h4>
 				</div>
 				<div class="modal-body col-xs-12">
 					<label class="col-xs-3 customerIdlabel">Customer ID:</label> 
@@ -255,7 +254,7 @@ button:hover{
 					<a href="javascript:void(0);" title="Click here to check for different options to create Customer ID" onclick="showInfo()"><span class="glyphicon glyphicon-info-sign" id="info" ></span></a>
 					<div class="scenario" id="idScenarios">
 					    <h6>
-					    	<!-- <strong>Option 1</strong>-  -->Use the existing customer profile ID, which is provided in the sample application documentation. 
+					    	Use the existing customer profile ID, which is provided in the sample application documentation. 
 					    </h6>
 					    <h6 class="paddingB10 center">(or)</h6>
 					    <h6>
@@ -279,6 +278,5 @@ button:hover{
 		</div>
 		</div>
 	</div>
-
 </body>
 </html>

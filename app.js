@@ -179,6 +179,9 @@ function AcceptHosted(id)
             document.getElementById("send_hptoken").submit();
             document.getElementById("acceptHosted").style.display="block";
             document.getElementById("load_payment").style.display="block";
+            // var iframe = document.getElementById("load_payment");
+            // var form = document.getElementById("send_hptoken");
+            // iframe.style.height = form.offsetHeight + 'px';
       }
       else
       {
@@ -853,8 +856,18 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
                         //params['height']=330;
                         //params['width']=50;
                       }
-                    frame.height=parseInt(params['height']);
-                    frame.width=parseInt(params['width']);
+                      if(getComputedStyle(document.querySelector(".w100")).width != "687.297px")
+                      {
+                        params['height']=+params['height'] + 100; 
+                        frame.height=parseInt(params['height']);
+                        frame.width=parseInt(params['width']);
+                      }
+                      else
+                      {
+                        frame.height=parseInt(params['height']);
+                      frame.width=parseInt(params['width']);
+                      }
+                    
                     break;
 
       case "successfulSave"   :   $('#myModal').modal('hide'); location.reload(false); break;
