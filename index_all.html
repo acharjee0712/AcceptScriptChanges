@@ -71,7 +71,7 @@
     #home
 	{
 	display: block;
-    margin-top: 200px;
+    margin-top: 188px;
     font-size: 20px;
     color: #555;
     font-weight: 600;
@@ -148,10 +148,11 @@
     border-radius: 0;
     cursor: pointer!important;
     font-family: OpenSans,sans-serif;
-    font-size: .85714rem;
+    font-size: 100%;
     outline: 0;
     transition: background .25s ease;
     align-items: center;
+    margin-bottom: 12px !important;
     /*background: #003ea9;*/
     background: steelblue;
     border: 0;
@@ -163,7 +164,7 @@
     margin: 0rem .35714rem .14286rem .35714rem;
     min-height: 50px;
     min-width: 165px;
-    padding: 0rem!important;
+    padding: 6%!important;
     text-decoration: none;
     margin-left: 25%;
     border-radius: 10px;
@@ -211,26 +212,67 @@ text-align: center;font-weight: 600;
 				</ul>
 			</div>
 		</div> -->
-     <div class="col-md-12 JSDiv">
+     <!-- <div class="col-md-12 JSDiv">
      	<div class="col-md-3">
+     		<a href="index.html?producttype=acceptjs" class="tabs">
 		  <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptjs" class="tabs">Accept.js</a>
+	          Accept.js
           </button>
+          </a>
          </div>
          <div class="col-md-3">
+	          <a href="index.html?producttype=acceptui" class="tabs">
+
          	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptui" class="tabs">Accept.js UI</a>
+         		Accept.js UI
           </button>
+          </a>
          </div>
           <div class="col-md-3">
+	          <a href="index.html?producttype=accepthosted" class="tabs">
+
           	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=accepthosted" class="tabs">Accept Hosted</a>
+          		Accept Hosted
           </button>
+          </a>
           </div>
           <div class="col-md-3">
+	          <a href="index.html?producttype=acceptcustomer" class="tabs">
+
           	<button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptcustomer" class="tabs">Accept Customer</a>
+          		Accept Customer
           </button>
+          </a>
+          </div>
+     </div> -->
+     <div class="col-md-12" style="width: 90%;margin-left: 3%">
+     	<div class="col-md-3">
+     	<!-- <a href="index.html?producttype=acceptjs" style="text-decoration-line: none;color: white;font-size:medium; ">
+		  <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          Accept.js</button></a> -->
+              <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptJs')" >
+	          Accept.js</button></a>
+         </div>
+         <div class="col-md-3">
+         	<!-- <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=acceptui" style="text-decoration-line: none;color: white;font-size:medium; ">Accept.js UI</a>
+          </button> -->
+          <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptUi')" >
+	          Accept.js UI</button></a>
+         </div>
+          <div class="col-md-3">
+          	<!-- <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=accepthosted" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Hosted</a>
+          </button> -->
+          <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptHosted')" >
+	          Accept Hosted</button></a>
+          </div>
+          <div class="col-md-3">
+          	<!-- <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
+	          <a href="index.html?producttype=acceptcustomer" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Customer</a>
+          </button> -->
+          <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptCustomer')" >
+	          Accept Customer</button></a>
           </div>
      </div>
     </div>

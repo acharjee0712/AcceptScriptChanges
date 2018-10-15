@@ -148,7 +148,11 @@
                       </button>
                    </div>
                    <div class="col-xs-6 paddingR25">
-                      <button class="btn btn-default btncancel"><a href="index_all.html" id="btnCancelJS">Cancel</a>
+                    <!-- <a href="index_all.html" id="btnCancelJS">
+                      <button class="btn btn-default btncancel">Cancel
+                      </button>
+                      </a> -->
+                      <button class="btn btn-default btncancel" onclick="RedirectToDashboard()">Cancel
                       </button>
                    </div>
                 </div>
@@ -379,8 +383,11 @@
            data-responseHandler="responseHandler">Pay
           </button>
           
-          <button class="btn btn-default btncancel"><a href="index_all.html" class="cancelUI">Cancel</a>
-          </button>
+          <!-- <button class="btn btn-default btncancel"><a href="index_all.html" class="cancelUI">Cancel</a>
+          </button> -->
+          <input type="button"  class="btn btn-default btncancel" name="Cancel" value="Cancel" onclick="RedirectToDashboard()"/>
+          <!-- <button class="btn btn-default btncancel" onclick="RedirectToDashboard()">Cancel
+            </button> -->
           </div>
          </form>
         </div>

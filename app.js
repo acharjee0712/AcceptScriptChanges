@@ -4,19 +4,33 @@ window.onload=loadpage();
 function loadpage()
 {
   var pageurl=window.location.href;
-  for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+   var elements = document.getElementsByClassName("productCont");
+   for(var x=0; x < elements.length; x++)
+        {
+            elements[x].style.display="none";
+        }
+  /*for (var el in elements) 
+  {
+    el.style.display="none";
+  }*/
   var product = getParameterByName('producttype',window.location.href.toLowerCase());
   if(pageurl.toLowerCase().indexOf("?producttype=")>0)
   {
     if(product=="acceptjs")
     {
+      debugger;
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
-        for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+        var elements = document.getElementsByClassName("productCont");
+  for(var x=0; x < elements.length; x++)
+        {
+            elements[x].style.display="none";
+        }
              //Show on invalid page request
              document.getElementById("invalidPage").innerHTML="";
              document.getElementById("invalidPage").innerHTML="Product Type not Found";
              document.getElementById("invalidProduct").style.display="block";
+        
        }
        else
        {
@@ -30,7 +44,7 @@ function loadpage()
     {
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
-        for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+        for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
              //Show on invalid page request
              document.getElementById("invalidPage").innerHTML="";
              document.getElementById("invalidPage").innerHTML="Product Type not Found";
@@ -59,7 +73,7 @@ function loadpage()
             }
             else
             {  //For invalid customer
-               for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+               for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Customer not Found";
               document.getElementById("invalidProduct").style.display="block";
@@ -67,7 +81,7 @@ function loadpage()
         }
         else
         { //For invalid product type
-          for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+          for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Product Type not Found";
               document.getElementById("invalidProduct").style.display="block";
@@ -101,7 +115,7 @@ function loadpage()
             }
             else
             {//For invalid customer
-               for (let el of document.querySelectorAll('.productCont')) el.style.display="none";
+               for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Customer not Found";
               document.getElementById("invalidProduct").style.display="block";
@@ -133,6 +147,28 @@ function loadpage()
        document.getElementById("invalidPage").innerHTML="Product Type not Found";
       document.getElementById("invalidProduct").style.display="block";
   }
+}
+
+//Navigation to accept suite pages on button click from dashboard page
+function LoadAcceptPage(pageType)
+{
+    switch(pageType)
+  {
+    case "acceptJs" : window.location.href = "index.html?producttype=acceptjs"; break;
+    case "acceptUi" : window.location.href = "index.html?producttype=acceptui"; break;
+    case "acceptHosted" : window.location.href = "index.html?producttype=accepthosted"; break;
+    case "acceptCustomer" : window.location.href = "index.html?producttype=acceptcustomer"; break;
+  }
+  
+}
+
+//Redircetion on cancel click
+function RedirectToDashboard()
+{
+  // window.setTimeout(function(){
+  //   window.location.href = window.location.origin+"/index_all.html";
+  // },1000);
+   window.location.href = window.location.origin+"/index_all.html";
 }
 
 //To get query string parameter value based on name
@@ -259,7 +295,7 @@ function ValidateCustomer(id)
      var customerId;
     customerId=id;
     var result={};
-   $.ajax({
+    $.ajax({
      type: 'GET',
      url: globalVars.ValidateCustomerRequestUrl,
      data:{
@@ -313,8 +349,8 @@ function AcceptCustomer(id)
     success: function (data, textStatus, jqXHR) {
       if(data.status)//if payment is succeeded
       {
-           document.getElementById("custtoken").value=data.successValue;
-           document.getElementById("send_token").setAttribute("action",globalVars.CustomerFormUrl);
+            document.getElementById("custtoken").value=data.successValue;
+            document.getElementById("send_token").setAttribute("action",globalVars.CustomerFormUrl);
             //Submit form with token to get iframe
             document.getElementById("send_token").submit();
             document.getElementById("load_profile").style.display="block";
@@ -332,7 +368,7 @@ function AcceptCustomer(id)
       }
       document.getElementById("acceptCustomer").style.display="block";
       document.getElementById("acceptCustomerId").style.display = "none";
-        document.getElementById("acceptCustomerManage").style.display = "block";
+      document.getElementById("acceptCustomerManage").style.display = "block";
     },
     error: function (jqXHR, textStatus, errorThrown) {
           document.getElementById("msgCS").innerHTML ="";
@@ -515,27 +551,27 @@ function onTextInput(id)
    if(id == "cardNumber" && element.value!="")
     {
       
-      if(visa.includes(element.value)|| visa.includes((element.value).substring(0,1)))
+      if(visa.indexOf(element.value)>-1|| visa.indexOf((element.value).substring(0,1))>-1)
       {
        cardNumElem.classList.add("icon-type-visa");
       }
-      else if(JCb.includes(element.value)|| JCb.includes((element.value).substring(0,4)))
+      else if(JCb.indexOf(element.value)>-1|| JCb.indexOf((element.value).substring(0,4))>-1)
       {
         cardNumElem.classList.add("icon-type-jcb");
       }
-      else if(discover.includes(element.value) || discover.includes((element.value).substring(0,4)) || discover.includes((element.value).substring(0,2)))
+      else if(discover.indexOf(element.value)>-1 || discover.indexOf((element.value).substring(0,4))>-1 || discover.indexOf((element.value).substring(0,2))>-1)
       {
         cardNumElem.classList.add("icon-type-discover");
       }
-      else if(amex.includes(element.value)|| amex.includes((element.value).substring(0,2)))
+      else if(amex.indexOf(element.value)>-1|| amex.indexOf((element.value).substring(0,2))>-1)
       {
         cardNumElem.classList.add("icon-type-amex");
       }
-      else if(dinersClub.includes(element.value) || dinersClub.includes((element.value).substring(0,2)))
+      else if(dinersClub.indexOf(element.value)>-1 || dinersClub.indexOf((element.value).substring(0,2))>-1)
       {
         cardNumElem.classList.add("icon-type-dinersclub");
       }
-      else if(masterCard.includes(element.value) || masterCard.includes((element.value).substring(0,4)) || masterCard.includes((element.value).substring(0,2)))
+      else if(masterCard.indexOf(element.value)>-1 || masterCard.indexOf((element.value).substring(0,4))>-1 || masterCard.indexOf((element.value).substring(0,2))>-1)
       {
         cardNumElem.classList.add("icon-type-mastercard");
       }
@@ -856,7 +892,7 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
                         //params['height']=330;
                         //params['width']=50;
                       }
-                      if(getComputedStyle(document.querySelector(".w100")).width != "687.297px")
+                      if(parentFrame== "payment" && getComputedStyle(document.querySelector(".w100")).width != "687.297px")
                       {
                         params['height']=+params['height'] + 100; 
                         frame.height=parseInt(params['height']);
@@ -873,11 +909,15 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
       case "successfulSave"   :   $('#myModal').modal('hide'); location.reload(false); break;
 
       case "cancel"       : 
-                    switch(parentFrame){
+       if( parentFrame== "payment") 
+            {
+             window.location.href='index_all.html';
+            }
+                  /*  switch(parentFrame){
                     case "manage"       : alert("manage");$("#send_token").attr({"action":baseUrl+"manage","target":"load_profile" }).submit(); break;
-                    case "payment"    : window.location.href='index_all.html';break; //sessionStorage.removeItem("HPTokenTime"); $('#HostedPayment').attr('src','about:blank'); break; 
+                    case "payment"    :alert("cancel"); window.location.href='index_all.html';break; //sessionStorage.removeItem("HPTokenTime"); $('#HostedPayment').attr('src','about:blank'); break; 
                     }
-                    break;
+                    break;*/
       //On successful payment in hosted
       case "transactResponse" : 
       var transResponse = JSON.parse(params['response']); 

@@ -108,6 +108,10 @@ input[type='text']
     font-weight:400;
     width:220px;
 }
+input[type='text']::-ms-clear
+{
+    display: none;
+}
 .hideElement{
     display: none;
 }
