@@ -97,7 +97,7 @@ function loadpage()
     {
       activeCont="acceptcustomer";
       
-       document.getElementById("txtCustomerId").value="1813212446";
+       document.getElementById("txtCustomerId").value=globalVars.ValidCustomer;
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
         document.getElementById("acceptCustomer").style.display="none";
@@ -222,7 +222,7 @@ function AcceptHosted(id)
       else
       {
               //on failure, show error message
-              document.getElementById("noteHS").style.display="none";
+             // document.getElementById("noteHS").style.display="none";
               document.getElementById("msgHS").innerHTML ="";
               document.getElementById("msgHS").innerHTML =data.errorMessage;
               var element = document.getElementById("alertHS");
@@ -909,7 +909,7 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
       case "successfulSave"   :   $('#myModal').modal('hide'); location.reload(false); break;
 
       case "cancel"       : 
-       if( parentFrame== "payment") 
+            if( parentFrame== "payment") 
             {
              window.location.href='index_all.html';
             }
@@ -928,8 +928,8 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
               document.getElementById("hostedPayment").style.display="none";
               //To append current time and date in confirmation page
               var currentdate = new Date();
-             document.getElementById("orderIDHosted").innerHTML=transResponse.transId;
-             document.getElementById("orderDateHosted").innerHTML=transResponse.dateTime;
+              document.getElementById("orderIDHosted").innerHTML=transResponse.transId;
+              document.getElementById("orderDateHosted").innerHTML=transResponse.dateTime;
               document.getElementById("confirmDivHosted").classList.add("hostedPage");
               document.getElementById("confirmDivHosted").style.display="block";
             }

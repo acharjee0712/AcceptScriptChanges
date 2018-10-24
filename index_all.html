@@ -17,9 +17,9 @@
 	body{
 		 font-family:  Century Gothic,Regular!important;
 		 /*background: url('images/AdobeStock_191284997.jpeg'); */
-		 background: url('images/background_cloth.jpg');
+		 background: url('images/background_cloth.jpg') no-repeat;
 		 padding-top: 50px;
-		 background-size: 100%;
+		 background-size: 100% 100%;
 		 background-attachment: fixed;
 	}
 		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;height: 58px;}
@@ -70,11 +70,21 @@
 	}
     #home
 	{
-	display: block;
+		    height: 55%;
+    position: absolute;
+    display: table;
+	/*display: block;
     margin-top: 188px;
     font-size: 20px;
     color: #555;
+    font-weight: 600;*/
+	}
+	.homeText{
+		font-size: 20px;
+    color: #555;
     font-weight: 600;
+    display: table-cell;
+    vertical-align: middle;
 	}
 	.textBox{
 		width: 35%;
@@ -277,8 +287,9 @@ text-align: center;font-weight: 600;
      </div>
     </div>
    <div class="tab-content panel-group">
-		<div class="" id="home" align="center" >
-	      “Select any of above Authorize.Net Accept suite product type to experience the ease of building websites and mobile applications without increasing PCI burden for merchants using our JavaScript libraries and hosted forms” 
+		<div  id="home" align="center" >
+			<p class="homeText">
+	      “Select any of above Authorize.Net Accept suite product type to experience the ease of building websites and mobile applications without increasing PCI burden for merchants using our JavaScript libraries and hosted forms” </p>
 	    </div>
 	</div>
 	<div id="customerId" class="modal">

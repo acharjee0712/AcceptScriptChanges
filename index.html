@@ -31,11 +31,13 @@
     </div>
    <div class="row">
     <div class="col-md-12 alertCont" >
+      <div class="errorAlert">
     <div class="alert alert-success" id="alert">
         <h5 id="note" class="hideElement">Thank you! Your order has been successfully placed.</h5>
             <span id="msg"></span>
     </div>
-     <div class="col-md-8" id="paymentDivJS">
+  </div>
+     <div class="col-xs-12 col-sm-7 col-md-7" id="paymentDivJS">
       <div class="panel pane-default panelJS">
         
         <div class="panel-body panelBodyJS">
@@ -43,18 +45,18 @@
               <h4 class="h4Title">Payment Details</h4>
           </div>
           <!-- Radio button -->
-             <div class="row paddingB5">
-              <div class="col-xs-12 center">
-                  <div class="col-md-6">
+             <div class="row paddingJS" >
+              <div class="col-xs-12 mrgL6">
+                  <div class="col-xs-5 col-md-5">
                   <input type="radio" id="rdCard" name="optradio" value="card" onclick="showData(this.value)"> Credit Card
                 </div>
-                  <div class="col-md-6">
+                  <div class="col-xs-6 col-md-6 paddingL0">
                   <input type="radio" id="idBank" name="optradio" value="bank" onclick="showData(this.value)"> Bank Account
                 </div>
               </div>
              </div>
           <!-- Credit card Div    -->
-              <div id="card" class="hideElement">
+              <div id="card" class="hideElement paddingJS">
                 <div class="row cardRow">
                    <div class="col-xs-12">
                      <div class="form-group">
@@ -95,7 +97,7 @@
                 </div>
               </div>
           <!-- Bank Account Div -->
-              <div id="bank" class="hideElement">
+              <div id="bank" class="hideElement paddingJS">
                 <div class="row cardRow">
                  <div class="col-xs-12">
                   <div class="form-group">
@@ -140,7 +142,7 @@
                 </div>
               </div>
           <!-- Buttons -->
-              <div class="row" id="btns">
+              <div class="row paddingJS" id="btns">
                    <input type="hidden" name="dataValue" id="dataValue" />
                    <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
                    <div class="col-xs-6 paddingL25">
@@ -159,19 +161,19 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4" id="cartJS">
+    <div class="col-xs-12 col-sm-5 col-md-5 cart" id="cartJS">
       <div class="panel pane-default panelcartJS">
         
         <div class="panel-body panelBodycartJS" style="">
             <div class="panel-heading panelHeadingcartJS">
                 <h4 class="h4Title">Order Summary</h4>
             </div>
-          <div class="row paddingT5">
+          <div class="row paddingT5 paddingCartRows">
              <div class="col-xs-3 image">
                <img src="images/spects.jpg" alt="">
              </div>
              <div class="col-xs-5">
-               <span class="mrgR100">Sunglasses</span>
+               <span class="block">Sunglasses</span>
                <span>Black</span>
              </div>
              <div class="col-xs-2">
@@ -181,12 +183,12 @@
                $19
              </div>
           </div>
-          <div class="row paddingT5">
+          <div class="row paddingT5 paddingCartRows" >
              <div class="col-xs-3 image">
                <img src="images/bag.jpg" alt="">
              </div>
              <div class="col-xs-5">
-               <span class="mrgR100">Backpack</span>
+               <span class="block">Backpack</span>
                <span>Blue</span>
              </div>
              <div class="col-xs-2">
@@ -196,12 +198,12 @@
                $23
              </div>
           </div>
-          <div class="row paddingT5">
+          <div class="row paddingT5 paddingCartRows">
              <div class="col-xs-3 image">
                <img src="images/jacket.jpg" alt="">
              </div>
              <div class="col-xs-5">
-               <span>Leather Jacket</span>
+               <span class="block">Leather Jacket</span>
                <span>Brown</span>
              </div>
              <div class="col-xs-2">
@@ -211,12 +213,12 @@
                $33
              </div>
           </div>
-          <div class="row paddingT5">
+          <div class="row paddingT5 paddingCartRows">
              <div class="col-xs-3 image">
                <img src="images/shoes.jpg" alt="">
              </div>
              <div class="col-xs-5">
-               <span >Sports Shoes</span>
+               <span class="block">Sports Shoes</span>
                <span>White</span>
              </div>
              <div class="col-xs-2">
@@ -284,7 +286,7 @@
       <h2 class="heading">Accept.js UI</h2>
     </div>
    <div class="row paddingT0">
-    <div class="col-md-12 alertContUI">
+    <div class="col-md-7 alertContUI">
     <div class="alert alert-success" id="alertUI">
         <h5 id="noteUI" class="hideElement">Thank you! Your order has been successfully placed.</h5>
             <span id="msgUI"></span>
@@ -298,11 +300,11 @@
              <h4 class="h4Title">Order Summary</h4>
           </div>
           <div class="row paddingT2">
-             <div class="col-xs-3 image">
+             <div class="col-xs-3 image paddingL30">
                <img src="images/spects.jpg" alt="">
              </div>
              <div class="col-xs-4">
-               <span class="mrgR100">Sunglasses</span>
+               <span class="block">Sunglasses</span>
                <span>Black</span>
              </div>
              <div class="col-xs-3">
@@ -313,11 +315,11 @@
              </div>
           </div>
           <div class="row paddingT2">
-             <div class="col-xs-3 image">
+             <div class="col-xs-3 image paddingL30">
                <img src="images/bag.jpg" alt="">
              </div>
              <div class="col-xs-4">
-               <span class="mrgR100">Backpack</span>
+               <span class="block">Backpack</span>
                <span>Blue</span>
              </div>
              <div class="col-xs-3">
@@ -328,11 +330,11 @@
              </div>
           </div>
           <div class="row paddingT2">
-             <div class="col-xs-3 image">
+             <div class="col-xs-3 image paddingL30">
                <img src="images/jacket.jpg" alt="">
              </div>
              <div class="col-xs-4">
-               <span class="mrgR30">Leather Jacket</span>
+               <span class="block">Leather Jacket</span>
                <span>Brown</span>
              </div>
              <div class="col-xs-3">
@@ -343,12 +345,12 @@
              </div>
           </div>
           <div class="row paddingT2">
-             <div class="col-xs-3 image">
+             <div class="col-xs-3 image paddingL30">
                <img src="images/shoes.jpg" alt="">
              </div>
              <div class="col-xs-4">
-               <span class="mrgR30">Sports Shoes</span>
-               <span class="spanW">White</span>
+               <span class="block">Sports Shoes</span>
+               <span>White</span>
              </div>
              <div class="col-xs-3">
                1x$24
@@ -435,11 +437,12 @@
       </div>
      <div class="row paddingT1">
       <div class="col-md-12 alertContHosted">
+        <div class="errorAlert">
       <div class="alert alert-success alertAccepHost" id="alertHS" >
-        <p id="noteHS" class="hideElement">Thank you! Your order has been successfully placed.</p>
             <span id="msgHS"></span>
       </div>
-       <div class=" col-md-8" id="hostedPayment">
+    </div>
+       <div class="col-xs-12 col-sm-7 col-md-7" id="hostedPayment">
         <div class="panel pane-default panelHosted">
           
           <div class="panel-body panelBodyHosted">
@@ -461,7 +464,7 @@
             </div>
         </div>
       </div>
-      <div class="col-md-4" id="cartHosted">
+      <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 cart" id="cartHosted">
         <div class="panel pane-default panelcartHosted">
           
           <div class="panel-body panelBodycartHosted">
@@ -473,7 +476,7 @@
                  <img src="images/spects.jpg" alt="">
                </div>
                <div class="col-xs-5">
-                 <span class="mrgR100">Sunglasses</span>
+                 <span class="block">Sunglasses</span>
                  <span>Black</span>
                </div>
                <div class="col-xs-2">
@@ -488,7 +491,7 @@
                  <img src="images/bag.jpg" alt="">
                </div>
                <div class="col-xs-5">
-                 <span class="mrgR100">Backpack</span>
+                 <span class="block">Backpack</span>
                  <span>Blue</span>
                </div>
                <div class="col-xs-2">
@@ -503,7 +506,7 @@
                  <img src="images/jacket.jpg" alt="">
                </div>
                <div class="col-xs-5">
-                 <span >Leather Jacket</span>
+                 <span class="block">Leather Jacket</span>
                  <span>Brown</span>
                </div>
                <div class="col-xs-2">
@@ -518,7 +521,7 @@
                  <img src="images/shoes.jpg" alt="">
                </div>
                <div class="col-xs-5">
-                 <span >Sports Shoes</span>
+                 <span class="block">Sports Shoes</span>
                  <span >White</span>
                </div>
                <div class="col-xs-2">
@@ -614,18 +617,19 @@
             <span id="msgCS"></span>
   </div>
   <input type="hidden" name="isvalidated" id="isvalidated" value="no">
-  <div class="col-md-8" id="acceptCustomerId" style="">
+  <div class="col-xs-12 col-md-7" id="acceptCustomerId" style="">
     <div class="panel pane-default panelacceptCustomer"> 
         <div class="panel-body panelBodyacceptCustomer">
-          <label class="col-md-3 customerIdlabel">Customer ID:</label> 
-          <div class="form-group textBox col-md-3" style="">
+          <div class="col-xs-12">
+          <label class="col-xs-5 col-md-3 customerIdlabel">Customer ID:</label> 
+          <div class="form-group textBox col-xs-5 col-md-3" style="">
               <input type="text" id="txtCustomerId" class="form-control customerIdTextW100" name="customerId" onkeypress="return isNumber(event)">
               
           </div>
-          <div class="col-md-2 mrgT1" >
+          <div class="col-xs-2 col-md-2 mrgT1" >
            <a href="javascript:void(0);" title="Click here to check for different options to create Customer ID" onclick="showInfo()"><span class="glyphicon glyphicon-info-sign" id="info" ></span></a>
           </div>
-          
+          </div>
           <div class="scenario" id="idScenarios">
               <h6>
                 <!-- <strong>Option 1</strong>-  -->Use the existing customer profile ID, which is provided in the sample application documentation. 
