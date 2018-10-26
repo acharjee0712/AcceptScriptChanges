@@ -1,0 +1,61 @@
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.deps.json
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.runtimeconfig.json
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.runtimeconfig.dev.json
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.dll
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.pdb
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.dll
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.pdb
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.dll.config
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csprojAssemblyReference.cache
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csproj.CoreCompileInputs.cache
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorAssemblyInfo.cache
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorAssemblyInfo.cs
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.AssemblyInfoInputs.cache
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.AssemblyInfo.cs
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorTargetAssemblyInfo.cache
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csproj.CopyComplete
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.dll
+C:\Accept Suite\Code\AcceptSuiteService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.pdb
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.deps.json
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.runtimeconfig.json
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.runtimeconfig.dev.json
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.dll
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.pdb
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpService\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.dll.config
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csprojAssemblyReference.cache
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorAssemblyInfo.cache
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorAssemblyInfo.cs
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.AssemblyInfo.cs
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorTargetAssemblyInfo.cache
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csproj.CopyComplete
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.dll
+C:\git\AcceptCSharpService\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.pdb
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.deps.json
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.runtimeconfig.json
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.runtimeconfig.dev.json
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.dll
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AcceptSuiteService.pdb
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpServices\AcceptSuiteService\bin\Debug\netcoreapp2.1\SampleCode.dll.config
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csprojAssemblyReference.cache
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorAssemblyInfo.cache
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorAssemblyInfo.cs
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.AssemblyInfo.cs
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.RazorTargetAssemblyInfo.cache
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.csproj.CopyComplete
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.dll
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\AcceptSuiteService.pdb
+C:\git\AcceptCSharpServices\AcceptSuiteService\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

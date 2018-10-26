@@ -1,0 +1,26 @@
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.deps.json
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.csproj.CoreCompileInputs.cache
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.AssemblyInfoInputs.cache
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.AssemblyInfo.cs
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\Accept Suite\Code\AcceptSuiteService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.deps.json
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.AssemblyInfo.cs
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpService\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.csprojAssemblyReference.cache
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.deps.json
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.AssemblyInfo.cs
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Debug\netcoreapp2.1\AuthorizeNET.csprojAssemblyReference.cache

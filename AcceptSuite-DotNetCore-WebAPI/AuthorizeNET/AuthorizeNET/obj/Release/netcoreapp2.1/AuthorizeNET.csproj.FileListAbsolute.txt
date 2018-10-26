@@ -1,0 +1,9 @@
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\bin\Release\netcoreapp2.1\AuthorizeNET.deps.json
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\bin\Release\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\bin\Release\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Release\netcoreapp2.1\AuthorizeNET.csprojAssemblyReference.cache
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Release\netcoreapp2.1\AuthorizeNET.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Release\netcoreapp2.1\AuthorizeNET.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Release\netcoreapp2.1\AuthorizeNET.AssemblyInfo.cs
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Release\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\AuthorizeNET\AuthorizeNET\obj\Release\netcoreapp2.1\AuthorizeNET.pdb

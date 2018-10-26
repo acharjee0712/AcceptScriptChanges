@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="AcceptSuiteService20181001040220" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\git\\AcceptCSharpServices\\AcceptSuiteService\\obj\\Release\\netcoreapp2\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

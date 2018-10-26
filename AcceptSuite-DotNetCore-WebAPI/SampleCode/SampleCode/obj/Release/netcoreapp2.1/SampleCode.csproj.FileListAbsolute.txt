@@ -1,0 +1,13 @@
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Release\netcoreapp2.1\SampleCode.dll.config
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Release\netcoreapp2.1\SampleCode.deps.json
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Release\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Release\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Release\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Release\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.csprojAssemblyReference.cache
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.AssemblyInfo.cs
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.csproj.CopyComplete
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Release\netcoreapp2.1\SampleCode.pdb

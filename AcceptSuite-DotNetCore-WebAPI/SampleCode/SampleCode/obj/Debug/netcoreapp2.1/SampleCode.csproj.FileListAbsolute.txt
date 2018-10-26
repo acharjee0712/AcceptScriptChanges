@@ -1,0 +1,45 @@
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.dll.config
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.deps.json
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.runtimeconfig.json
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.runtimeconfig.dev.json
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.dll
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.pdb
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csprojAssemblyReference.cache
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csproj.CoreCompileInputs.cache
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.AssemblyInfoInputs.cache
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.AssemblyInfo.cs
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csproj.CopyComplete
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.dll
+C:\Accept Suite\Code\AcceptSuiteService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.dll.config
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.deps.json
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.runtimeconfig.json
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.runtimeconfig.dev.json
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpService\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csprojAssemblyReference.cache
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.AssemblyInfo.cs
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csproj.CopyComplete
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpService\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.dll.config
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.deps.json
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.runtimeconfig.json
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.runtimeconfig.dev.json
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\SampleCode.pdb
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\AuthorizeNET.dll
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\bin\Debug\netcoreapp2.1\AuthorizeNET.pdb
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csprojAssemblyReference.cache
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csproj.CoreCompileInputs.cache
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.AssemblyInfoInputs.cache
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.AssemblyInfo.cs
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.csproj.CopyComplete
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.dll
+C:\git\AcceptCSharpServices\SampleCode\SampleCode\obj\Debug\netcoreapp2.1\SampleCode.pdb

@@ -9,10 +9,6 @@ function loadpage()
         {
             elements[x].style.display="none";
         }
-  /*for (var el in elements) 
-  {
-    el.style.display="none";
-  }*/
   var product = getParameterByName('producttype',window.location.href.toLowerCase());
   if(pageurl.toLowerCase().indexOf("?producttype=")>0)
   {
