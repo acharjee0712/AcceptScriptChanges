@@ -15,18 +15,21 @@
  
 	<style type="text/css">
 	body{
-		 font-family:  Century Gothic,Regular!important;
+		 /*font-family:  Century Gothic,Regular!important;*/
+		 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
 		 /*background: url('images/AdobeStock_191284997.jpeg'); */
 		 background: url('images/background_cloth.jpg') no-repeat;
 		 padding-top: 50px;
 		 background-size: 100% 100%;
 		 background-attachment: fixed;
+		 font-size: 14px;
 	}
-		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;height: 58px;}
+		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;height: 50px;}
 		.nav>li {display: inline-block;}
-		.navbar-centered .nav > li > a {color: white}
-		.navbar-inverse { background-color: steelblue } /* #7B7B7B */
-		.navbar-centered .nav > li > a:hover{ background-color: white; color: steelblue; }
+		.navbar-centered .nav > li > a {border: none !important; font-weight: 500 !important;color: white}
+		.navbar-inverse { background-color: steelblue} /* #7B7B7B  #565758*/
+		.navbar-centered .nav > li > a:hover{ background-color: white; color: steelblue;font-weight: 600 !important;}
+		.navbar-centered .nav > li > a::after{ display: block;font-weight: bold;height: 0;overflow:hidden;visibility: hidden;content: attr(title);}
 		.navbar-centered .nav .active > a,.navbar-centered .navbar-nav > .active > a:focus { background-color: white; color: black; font-weight:bold; }
 		.navbar-centered .navbar-nav { float: none; text-align: center; }
 	    .navbar-centered .navbar-nav > li { float: none; }
@@ -36,14 +39,17 @@
 		@media (min-width: 768px) {
 	    	.navbar-centered .nav > li > a { width:15%; }
 	    	#home { font-size: 30px}
+
 	    }
 	    @media (min-width:360px ) and (max-width: 768px){
 	    	.navbar-centered .nav > li > a {font-size: 12px}
-	    	#home { font-size: 20px}
+	    	#home { font-size: 20px;margin-top: 226px !important;}
+	    	.navbar {height: 200px}
 	    }
 	    @media (max-width: 360px) {
 	    	.navbar-centered .nav > li > a {font-size: 10px}
-	    	#home { font-size: 15px}
+	    	#home { font-size: 15px;margin-top: 165px;}
+	    	.navbar {height: 200px}
 	    }
 	    @media (min-width: 1022px) {
 	    	.modal-dialog { width: 850px}
@@ -51,6 +57,10 @@
 	    }
 		.navbar{
 			border-radius: 2px;
+		}
+
+		.navbar-centered{
+			padding-left: 90px !important;
 		}
 	.productTypes>li
 	{
@@ -70,7 +80,8 @@
 	}
     #home
 	{
-		    height: 55%;
+		margin-top: 157px;
+		    /*height: 48%;*/
     position: absolute;
     display: table;
 	/*display: block;
@@ -80,7 +91,7 @@
     font-weight: 600;*/
 	}
 	.homeText{
-		font-size: 20px;
+		font-size: 23px;
     color: #555;
     font-weight: 600;
     display: table-cell;
@@ -177,8 +188,8 @@
     padding: 6%!important;
     text-decoration: none;
     margin-left: 25%;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px -1px #333
+    /*border-radius: 10px;*/
+    /*box-shadow: 3px 3px 3px -1px #333*/
     /*text-transform: uppercase;*/
 }
 button:hover{
@@ -200,6 +211,42 @@ text-decoration-line: none !important;color: white !important;font-size:medium;
 text-align: center;font-weight: 600;
 }
 
+ 
+
+ 
+
+.headerBtnCustomer{
+    width: 176px !important;
+    font-size: 18px !important;
+    height: 48px;
+}
+
+.headerBtnJs{
+    width: 120px !important;
+    font-size: 18px !important;
+    height: 48px;
+}
+
+.headerBtnJsUI{
+    width: 135px !important;
+    font-size: 18px !important;
+    height: 48px;
+}
+
+.headerBtnHosted{
+    width: 155px !important;
+    font-size: 18px !important;
+    height: 48px;
+}
+
+.btnsList{
+	padding-right: 8% !important;
+}
+
+.btnsListJS{
+	padding-right: 7.3% !important;
+}
+
 	</style>
 	<script src="scripts/jquery-2.1.4.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
@@ -210,18 +257,21 @@ text-align: center;font-weight: 600;
 	<!-- <script src="https://includestest.ccdc02.com/cardinalcruise/v1/songbird.js"></script> -->
 </head>
 <body>
+
+<div class="col-xs-12" style="padding: 0">
 	<div class="container-fluid containerDiv">
-		<!-- <div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid navbar-centered">
-				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto;padding-top: 2px;">
-					<li><a href="index.html?producttype=acceptjs">Accept.js</a></li>
-					<li><a href="index.html?producttype=acceptui">Accept.js UI</a></li>
-					<li><a href="index.html?producttype=accepthosted">Accept Hosted</a></li>
-					<li><a href="#" onclick="ShowModal()" data-toggle="modal" data-target="#customerId">Accept Customer</a></li>
-					<li><a href="index.html?producttype=acceptcustomer">Accept Customer</a></li>
+				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto;padding-top: 1px;">
+					<li class="btnsListJS"><a class="headerBtnJs"  href="index.html?producttype=acceptjs" title="Accept.js">Accept.js</a></li>
+					<li class="btnsList"><a class="headerBtnJsUI" href="index.html?producttype=acceptui" title="Accept.js UI">Accept.js UI</a></li>
+					<li class="btnsList"><a class="headerBtnHosted" href="index.html?producttype=accepthosted" title="Accept Hosted">Accept Hosted</a></li>
+					<!-- <li><a href="#" onclick="ShowModal()" data-toggle="modal" data-target="#customerId">Accept Customer</a></li> -->
+					<li class="btnsList"><a class="headerBtnCustomer" href="index.html?producttype=acceptcustomer" title="Accept Customer">Accept Customer</a></li>
 				</ul>
-			</div>
-		</div> -->
+		    </div>
+	    </div>
+	<!-- </div> -->
      <!-- <div class="col-md-12 JSDiv">
      	<div class="col-md-3">
      		<a href="index.html?producttype=acceptjs" class="tabs">
@@ -255,36 +305,29 @@ text-align: center;font-weight: 600;
           </a>
           </div>
      </div> -->
-     <div class="col-md-12" style="width: 90%;margin-left: 3%">
+     <!-- <div class="col-md-12" style="width: 90%;margin-left: 3%">
      	<div class="col-md-3">
-     	<!-- <a href="index.html?producttype=acceptjs" style="text-decoration-line: none;color: white;font-size:medium; ">
-		  <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          Accept.js</button></a> -->
+     	
               <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptJs')" >
 	          Accept.js</button></a>
          </div>
          <div class="col-md-3">
-         	<!-- <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptui" style="text-decoration-line: none;color: white;font-size:medium; ">Accept.js UI</a>
-          </button> -->
+         	
           <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptUi')" >
 	          Accept.js UI</button></a>
          </div>
           <div class="col-md-3">
-          	<!-- <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=accepthosted" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Hosted</a>
-          </button> -->
+          	<
           <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptHosted')" >
 	          Accept Hosted</button></a>
           </div>
           <div class="col-md-3">
-          	<!-- <button type="button"  class="visa-ui-btn-text" aria-label="Text Button">
-	          <a href="index.html?producttype=acceptcustomer" style="text-decoration-line: none;color: white;font-size:medium; ">Accept Customer</a>
-          </button> -->
+          	
           <button type="button"  class="visa-ui-btn-text" onclick="LoadAcceptPage('acceptCustomer')" >
 	          Accept Customer</button></a>
           </div>
-     </div>
+     </div> -->
+    </div>
     </div>
    <div class="tab-content panel-group">
 		<div  id="home" align="center" >

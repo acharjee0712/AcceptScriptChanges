@@ -2,7 +2,8 @@ body
 {
     background: url('images/background_cloth.jpg'); 
     padding-top: 50px;
-   font-family:  Century Gothic,Regular!important;
+   /*font-family:  Century Gothic,Regular!important;*/
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
    /*background-size: 100%;*/
    background-size: 100% 100%;
    background-attachment: fixed;
@@ -96,7 +97,7 @@ body
     margin-right: 15px;
 }
 .btncancel{
-    margin-right: 78px;
+    margin-right: 117px;
     text-decoration-line: none;
 }
 input[type='text']
@@ -446,7 +447,7 @@ display: block;
     padding-left: 0 !important;
 }
 #btnPayJS{
-   /* width:49%;*/
+   width:43%;
 }
 #btnCancelJS{
     text-decoration-line: none; 
@@ -471,7 +472,7 @@ display: block;
     font-weight: 300;
     text-align: center;background-color: steelblue;
    /* margin-bottom: 4%;margin-top: 4.8%;*/
-    padding: 1.4%;
+    padding: 2%;
     color: white;
 }
 .paddingT5{
@@ -585,7 +586,7 @@ padding-bottom: 2%;
     font-weight: 300;text-align: center;
     background-color: steelblue;margin-bottom: 5%;
     /*margin-top: 3.5%;*/
-    padding: 1.4%;color: white;
+    padding: 2%;color: white;
 }
 .footerHosted{
     padding-top: 2%;padding-bottom: 5.5%;padding-left: 15%;
@@ -779,7 +780,7 @@ margin: 0 auto;float: inherit;display: none;
 @media screen and (max-width:2000px) and (min-width: 1025px) {
    .cart.col-md-5{
         position: fixed;
-        left: 59%;
+        left: 66%;
        /* padding-left: 6%;
         padding-right: 0;*/
     }

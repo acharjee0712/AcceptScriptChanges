@@ -1,14 +1,8 @@
 # Accept Suite Integration with .Net Core WEB API
 
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ## Prerequisite:
 *	Windows 10 Professional
-*	Sublime Text or any editor of your choice.
+*	Sublime Text or any HTML editor.
 *	Internet Information Services 10
 
 ## Very detailed explanation of each product type.
@@ -24,20 +18,44 @@ https://developer.authorize.net/api/reference/features/acceptjs.html
 https://developer.authorize.net/api/reference/features/accept_hosted.html
 https://developer.authorize.net/api/reference/features/customer_profiles.html#Using_the_Accept_Customer_Hosted_Form
 
-## Integration
-Constants.js file consists of required URLs that are used for WEB API calls and constant parameters that are used throughout the application.
+## Web API Calls Integration with UI Application
+
+
+* Constants.js file contains keys where WEB API URL's can be updated. 
+
+* Open the folder **AcceptSuite-DotNetCore-WebAPI**
+
+* Detailed steps are explained on how to deploy on IIS.
+
+* Once deployed Successfully , update the URL's in Constants.js file as described below.
 
 
 The URLs should be provided with IP address and API service site port number in the following format.
-https://IPAddress:PortNumber/api/AcceptSuite/<ApiMethodName>
 
-* AcceptJSRequestUrl : URL to invoke Accept JS web service on payment.
+**https://IPAddress:PortNumber/api/AcceptSuite/<ApiMethodName>**
+
+* AcceptJSRequestUrl : URL to invoke Accept JS web service.
+
+	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/AcceptJS**
+
 ![Image of AcceptJSRequestUrl](Github-Images/AcceptJSRequestUrl.PNG)
+
 * AcceptHostedRequestUrl : URL to get the token value for Accept Hosted.
+
+	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/AcceptHosted**
+
 ![Image of HostedRequestUrl](Github-Images/HostedRequestUrl.PNG)
+
 * AcceptCustomerRequestUrl : URL to get the token value for Accept Customer.
+
+	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/AcceptCustomer**
+
 ![Image of CustomerRequestUrl](Github-Images/CustomerRequestUrl.PNG)
-* ValidateCustomerRequestUrl : URL to invoke a web api method to validated customer ID.
+
+* ValidateCustomerRequestUrl : URL to invoke a web api method to validate customer ID.
+
+	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/ValidateCustomer**
+
 ![Image of ValidateCustomerUrl](Github-Images/ValidateCustomerUrl.PNG)
  
 

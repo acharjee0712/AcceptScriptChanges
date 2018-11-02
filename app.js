@@ -164,7 +164,7 @@ function RedirectToDashboard()
   // window.setTimeout(function(){
   //   window.location.href = window.location.origin+"/index_all.html";
   // },1000);
-   window.location.href = window.location.origin+"/index_all.html";
+   window.location.href = "index_all.html";
 }
 
 //To get query string parameter value based on name
@@ -888,7 +888,7 @@ CommunicationHandler.onReceiveCommunication = function (argument) {
                         //params['height']=330;
                         //params['width']=50;
                       }
-                      if(parentFrame== "payment" && getComputedStyle(document.querySelector(".w100")).width != "687.297px")
+                      if(parentFrame== "payment" && getComputedStyle(document.querySelector(".w100")).width < "687.297px")
                       {
                         params['height']=+params['height'] + 100; 
                         frame.height=parseInt(params['height']);
