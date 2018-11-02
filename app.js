@@ -40,7 +40,11 @@ function loadpage()
     {
       if(pageurl.toLowerCase().indexOf("&customerid=")>0)
        {
-        for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
+        var elements = document.getElementsByClassName("productCont");
+		for(var x=0; x < elements.length; x++)
+        {
+            elements[x].style.display="none";
+        }
              //Show on invalid page request
              document.getElementById("invalidPage").innerHTML="";
              document.getElementById("invalidPage").innerHTML="Product Type not Found";
@@ -69,7 +73,11 @@ function loadpage()
             }
             else
             {  //For invalid customer
-               for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
+               var elements = document.getElementsByClassName("productCont");
+			  for(var x=0; x < elements.length; x++)
+			   {
+				elements[x].style.display="none";
+			   }
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Customer not Found";
               document.getElementById("invalidProduct").style.display="block";
@@ -77,7 +85,11 @@ function loadpage()
         }
         else
         { //For invalid product type
-          for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
+          var elements = document.getElementsByClassName("productCont");
+			  for(var x=0; x < elements.length; x++)
+			   {
+				elements[x].style.display="none";
+			   }
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Product Type not Found";
               document.getElementById("invalidProduct").style.display="block";
@@ -111,7 +123,11 @@ function loadpage()
             }
             else
             {//For invalid customer
-               for (var el in document.querySelectorAll('.productCont')) el.style.display="none";
+               var elements = document.getElementsByClassName("productCont");
+			  for(var x=0; x < elements.length; x++)
+			   {
+				elements[x].style.display="none";
+			   }
               document.getElementById("invalidPage").innerHTML="";
               document.getElementById("invalidPage").innerHTML="Customer not Found";
               document.getElementById("invalidProduct").style.display="block";
