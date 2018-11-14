@@ -388,7 +388,7 @@ margin-right: 3px;
    /* margin-top:2%;margin-bottom:2%;*/
     box-shadow: 1px 1px 2px 2px;
     background-color: white;border-radius: 1%;
-    /*padding-top: 0.5%;*/
+    padding-bottom: 1.7%;
 }
 .panelHeadingJS{
     font-weight: 300;text-align: center;
@@ -398,11 +398,11 @@ margin-right: 3px;
     color: white;
 }
 .paddingJS{
-    padding-top: 3% !important;
+    padding-top: 2.3% !important;
 }
-.paddingCartRows{
+/*.paddingCartRows{
     padding:3% !important;
-}
+}*/
 .mrgL6{
     margin-left: 6%;
 }
@@ -446,9 +446,7 @@ display: block;
 .paddingL0{
     padding-left: 0 !important;
 }
-#btnPayJS{
-   width:43%;
-}
+
 #btnCancelJS{
     text-decoration-line: none; 
 }
@@ -531,10 +529,10 @@ font-weight: 300;text-align: center;background-color: steelblue;margin-top: 3.5%
     padding-top: 1%;
    margin-right: 0;
 }
-.paddingT3{
-    padding-top: 3%;
+/* .paddingT3{
+    padding-top: 0%;
     margin-right: 0;
-}
+} */
 .paddingB2
 {
 padding-bottom: 2%;
@@ -589,7 +587,7 @@ padding-bottom: 2%;
     padding: 2%;color: white;
 }
 .footerHosted{
-    padding-top: 2%;padding-bottom: 5.5%;padding-left: 15%;
+    padding-top: 2%;padding-bottom: 2.4%;padding-left: 15%;
 }
 .totalHosted{
     padding-left: 2%;font-weight: bold;
@@ -775,6 +773,13 @@ margin: 0 auto;float: inherit;display: none;
         padding-right: 0;
         width: 46%;*/
     }
+     .paddingCartRows{
+    padding:2.1% !important;
+    }
+    .paddingT3{
+    padding-top: 15%;
+    margin-right: 0;
+}
 }
 
 @media screen and (max-width:2000px) and (min-width: 1025px) {
@@ -790,6 +795,13 @@ margin: 0 auto;float: inherit;display: none;
    #cartHosted{
         width:31.5%;
     }
+    .paddingCartRows{
+    padding:2.9% !important;
+    }
+    .paddingT3{
+    padding-top: 0%;
+    margin-right: 0;
+}
 }
 
 @media screen and (max-width:4000px) and (min-width: 2561px) {
@@ -810,6 +822,13 @@ margin: 0 auto;float: inherit;display: none;
         padding-right: 0;
         width: 24.7%
     }
+    .paddingCartRows{
+    padding:2.7% !important;
+    }
+    .paddingT3{
+    padding-top: 4.3%;
+    margin-right: 0;
+}
 }
 
 @media screen and (max-width:1920px) and (min-width:1367px) {
@@ -826,6 +845,10 @@ margin: 0 auto;float: inherit;display: none;
         padding-right: 0;
         width: 29%
     }
+    .paddingT3{
+    padding-top: 8.6%;
+    margin-right: 0;
+}
 }
 @media screen and (max-width:1600px) and (min-width:1367px) {
    #cartHosted{

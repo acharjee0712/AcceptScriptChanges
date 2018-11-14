@@ -1,28 +1,39 @@
-var globalVars={
+var globalVars = {
 
-   ClientKey : '6C47PepC2NyJ2dgTy89U56xnan24H3cb363wxvBC5DP9Cjk5Fwp6b4q2YBnjU2Xp',
-   
-   ApiLoginID : '78BZ5Xprry',
-   
-   ApiTransactionKey  : '8s2F95Q7brhHd7Tn',
+    // Default sandbox credentials
+
+    ClientKey: '6C47PepC2NyJ2dgTy89U56xnan24H3cb363wxvBC5DP9Cjk5Fwp6b4q2YBnjU2Xp',
+
+    ApiLoginID: '78BZ5Xprry',
+
+    ApiTransactionKey: '8s2F95Q7brhHd7Tn',
 
 
-   AcceptJSRequestUrl : 'https://10.173.192.248:2018/api/AcceptSuite/AcceptJS',
+    // Web API URL's
 
-   AcceptHostedRequestUrl : 'https://10.173.192.248:2018/api/AcceptSuite/AcceptHosted',
+    AcceptJSRequestUrl: 'https://localhost:2018/api/AcceptSuite/AcceptJS',
 
-   AcceptCustomerRequestUrl : 'https://10.173.192.248:2018/api/AcceptSuite/AcceptCustomer',
+    AcceptHostedRequestUrl: 'https://localhost:2018/api/AcceptSuite/AcceptHosted',
 
-   ValidateCustomerRequestUrl:'https://10.173.192.248:2018/api/AcceptSuite/ValidateCustomer',
+    AcceptCustomerRequestUrl: 'https://localhost:2018/api/AcceptSuite/AcceptCustomer',
 
-   
-   // below parameters is used to submit form with token value
-   HostedFormUrl : 'https://test.authorize.net/payment/payment',
-   
-   CustomerFormUrl :  'https://test.authorize.net/customer/manage',
+    ValidateCustomerRequestUrl: 'https://localhost:2018/api/AcceptSuite/ValidateCustomer',
 
-   IFrameCommunicatorUrl : window.location.origin +'/iframeCommunicator.html',
- 
-   ValidCustomer:'1813212446'
-  
+
+    // below parameters is used to submit form with token value
+
+    HostedFormUrl: 'https://test.authorize.net/payment/payment',
+
+    CustomerFormUrl: 'https://test.authorize.net/customer/manage',
+
+
+    //IFrameCommunicatorUrl
+
+    IFrameCommunicatorUrl: window.location.origin + '/iframeCommunicator.html',
+
+
+    // available customer id
+
+    ValidCustomer: '1813212446'
+
 }

@@ -33,7 +33,6 @@
     <div class="col-md-12 alertCont" >
       <div class="errorAlert">
     <div class="alert alert-success" id="alert">
-        <h5 id="note" class="hideElement">Thank you! Your order has been successfully placed.</h5>
             <span id="msg"></span>
     </div>
   </div>
@@ -150,10 +149,6 @@
                       </button>
                    </div>
                    <div class="col-xs-6 paddingR25">
-                    <!-- <a href="index_all.html" id="btnCancelJS">
-                      <button class="btn btn-default btncancel">Cancel
-                      </button>
-                      </a> -->
                       <button class="btn btn-default btncancel" onclick="RedirectToDashboard()">Cancel
                       </button>
                    </div>
@@ -161,7 +156,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-5 col-md-5 cart" id="cartJS">
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 cart" id="cartJS">
       <div class="panel pane-default panelcartJS">
         
         <div class="panel-body panelBodycartJS" style="">
@@ -288,7 +283,6 @@
    <div class="row paddingT0">
     <div class="col-md-7 alertContUI">
     <div class="alert alert-success" id="alertUI">
-        <h5 id="noteUI" class="hideElement">Thank you! Your order has been successfully placed.</h5>
             <span id="msgUI"></span>
     </div>
    </div>
@@ -384,12 +378,7 @@
            data-acceptUIFormHeaderTxt="Card Information"
            data-responseHandler="responseHandler">Pay
           </button>
-          
-          <!-- <button class="btn btn-default btncancel"><a href="index_all.html" class="cancelUI">Cancel</a>
-          </button> -->
           <input type="button"  class="btn btn-default btncancel" name="Cancel" value="Cancel" onclick="RedirectToDashboard()"/>
-          <!-- <button class="btn btn-default btncancel" onclick="RedirectToDashboard()">Cancel
-            </button> -->
           </div>
          </form>
         </div>
@@ -584,36 +573,11 @@
 <!-- End Accept Hosted -->
 
 <!-- Begin Accept Customer -->
-<!-- <div id="acceptCustomer" class="acceptCustomerCont productCont container">
-   <div>
-        <h2 style="text-align: center;color:#ffffff">Accept Customer</h2>
-    </div>
-<div class="row subCont">
-  <div class="alert alert-success" id="alertCS">
-        <p id="noteCS" class="hideElement">Thank you! Your order has been successfully placed.</p>
-            <span id="msgCS"></span>
-  </div>
-  <input type="hidden" name="isvalidated" id="isvalidated" value="no">
-
-  <div class="shopping-cart paymentCont">
-         
-          <div class="paymentDiv" style="border: none;">
-  <iframe id="load_profile" class="embed-responsive-item" name="load_profile"  frameborder="0" scrolling="yes" hidden="true">
-  </iframe>
-
-  <form id="send_token" method="post" target="load_profile" >
-    <input type="hidden" name="token" id="custtoken" value="" />
-  </form>
-</div>
-</div>
-</div>
-</div> -->
 <div id="acceptCustomer" class="acceptCustomerCont productCont container" >
    <div class="mrgT0">
         <h2 class="heading">Accept Customer</h2>
     </div>
   <div class="alert alert-success" id="alertCS">
-        <p id="noteCS" class="hideElement">Thank you! Your order has been successfully placed.</p>
             <span id="msgCS"></span>
   </div>
   <input type="hidden" name="isvalidated" id="isvalidated" value="no">
@@ -632,7 +596,7 @@
           </div>
           <div class="scenario" id="idScenarios">
               <h6>
-                <!-- <strong>Option 1</strong>-  -->Use the existing customer profile ID, which is provided in the sample application documentation. 
+                Use the existing customer profile ID, which is provided in the sample application documentation. 
               </h6>
               <h6 class="paddingB10 center">(or)</h6>
               <h6>
