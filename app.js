@@ -257,6 +257,7 @@ function AcceptHosted(id) {
             customerId: customerId
         },
         contentType: "application/json; charset=utf-8",
+		 dataType: "json",
         success: function (data, textStatus, jqXHR) {
             if (data.status)//if the response is success
             {
@@ -349,6 +350,7 @@ function ValidateCustomer(id) {
         },
         async: false,
         contentType: "application/json; charset=utf-8",
+		  dataType: "json",
         success: function (data, textStatus, jqXHR) {
             var valid;
             if (data.status)// if it is valid id
@@ -390,6 +392,7 @@ function AcceptCustomer(id) {
             iFrameCommunicatorUrl: globalVars.IFrameCommunicatorUrl//Value fetched from the constants.js file
         },
         contentType: "application/json; charset=utf-8",
+		dataType: "json",
         success: function (data, textStatus, jqXHR) {
             if (data.status)//if response is success
             {
@@ -730,6 +733,7 @@ function responseHandler(response) {
 
                 },
                 contentType: "application/json; charset=utf-8",
+				dataType: "json",
                 success: function (data, textStatus, jqXHR) {
 
                     document.getElementById("msgUI").innerHTML = "";
@@ -825,6 +829,7 @@ function paymentFormUpdate(opaqueData) {
             token: tokenVal
         },
         contentType: "application/json; charset=utf-8",
+		dataType: "json",
         success: function (data, textStatus, jqXHR) {
             document.getElementById("msg").innerHTML = "";
 
