@@ -11,13 +11,13 @@ var globalVars = {
 
     // Web API URL's
 
-    AcceptJSRequestUrl: 'https://localhost:2018/api/AcceptSuite/AcceptJS',
+    AcceptJSRequestUrl: 'https://localhost:4403/api/AcceptSuite/AcceptJS',
 
-    AcceptHostedRequestUrl: 'https://localhost:2018/api/AcceptSuite/AcceptHosted',
+    AcceptHostedRequestUrl: 'https://localhost:4403/api/AcceptSuite/AcceptHosted',
 
-    AcceptCustomerRequestUrl: 'https://localhost:2018/api/AcceptSuite/AcceptCustomer',
+    AcceptCustomerRequestUrl: 'https://localhost:4403/api/AcceptSuite/AcceptCustomer',
 
-    ValidateCustomerRequestUrl: 'https://localhost:2018/api/AcceptSuite/ValidateCustomer',
+    ValidateCustomerRequestUrl: 'https://localhost:4403/api/AcceptSuite/ValidateCustomer',
 
 
     // below parameters is used to submit form with token value

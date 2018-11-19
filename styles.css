@@ -97,7 +97,7 @@ body
     margin-right: 15px;
 }
 .btncancel{
-    margin-right: 117px;
+  /*  margin-right: 117px;*/
     text-decoration-line: none;
 }
 input[type='text']
@@ -265,9 +265,10 @@ text-align:left !important;
 }
 .btnsUI{
     text-align: center;
-    margin-left: 55px;
+    /*margin-left: 55px;*/
     margin-bottom: 10px;
-    padding-left: 10%;padding-top: 2.5%
+    /*padding-left: 10%;*/
+    padding-top: 2.5%
 }
 .lblreq:before{
  content:"*" ;
@@ -541,7 +542,7 @@ padding-bottom: 2%;
     float: right;width: 100%
 }
 #btnAcceptUI{
-    width: 17%;
+    /*width: 17%;*/
 }
 #hostedPayment{
    /* padding-left: 0 !important;*/
@@ -699,12 +700,18 @@ margin: 0 auto;float: inherit;display: none;
    /* width: 100%;
     margin-bottom: 1%;*/
 }
-
+@media (max-width: 768px){
+    .customerIdlabel{
+            padding-left: 0 !important
+        }
+        
+}
 @media (min-width: 768px){}
 .container {
     width: 100% !important;
     /* font-size: 15px; */
 }
+
 }
 @media screen and (max-width: 1024px){
      
@@ -721,6 +728,7 @@ margin: 0 auto;float: inherit;display: none;
         margin:0 auto  !important;
     }
 }
+
 @media screen and (max-width: 1024px) and (min-width: 769px){
      
    #load_payment{
@@ -777,7 +785,7 @@ margin: 0 auto;float: inherit;display: none;
     padding:2.1% !important;
     }
     .paddingT3{
-    padding-top: 15%;
+    padding-top: 3%;
     margin-right: 0;
 }
 }
