@@ -1,14 +1,18 @@
+cd C:\git\AcceptScriptNewChanges\AcceptSuite-DotNetCore-WebAPI
+
 dotnet build 
 
 dotnet publish -c Release -o C:\inetpub\wwwroot\PublishAcceptSuiteApiApp
+set-executionpolicy unrestricted
+
+import-module WebAdministration
+
+Get-ExecutionPolicy
 
 $SiteFolderPath = "C:\inetpub\wwwroot\PublishAcceptSuiteApiApp"
 $SiteAppPool = "AcceptSuiteApiPool"
 $SiteName = "AcceptSuiteApiSite"
 $SiteHostName = "www.AcceptSuiteApiSite.com"
-
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "import-module webadministration | out-null"
-set-executionpolicy unrestricted
 
 New-Item IIS:\AppPools\$SiteAppPool
 New-Item IIS:\Sites\$SiteName -physicalPath $SiteFolderPath -bindings @{protocol="http";bindingInformation=":80:"+$SiteHostName}
