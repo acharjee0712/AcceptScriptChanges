@@ -149,7 +149,7 @@
                       </button>
                    </div>
                    <div class="col-xs-6 paddingR25">
-                      <button class="btn btn-default btncancel" onclick="RedirectToDashboard()">Cancel
+                      <button class="btn btn-default btncancel btncancelJS" onclick="RedirectToDashboard()">Cancel
                       </button>
                    </div>
                 </div>
@@ -283,6 +283,7 @@
    <div class="row paddingT0">
     <div class="col-md-7 alertContUI">
     <div class="alert alert-success" id="alertUI">
+        <h5 id="noteUI" class="hideElement">Thank you! Your order has been successfully placed.</h5>
             <span id="msgUI"></span>
     </div>
    </div>
@@ -378,6 +379,7 @@
            data-acceptUIFormHeaderTxt="Card Information"
            data-responseHandler="responseHandler">Pay
           </button>
+          
           <input type="button"  class="btn btn-default btncancel" name="Cancel" value="Cancel" onclick="RedirectToDashboard()"/>
           </div>
          </form>
@@ -439,7 +441,7 @@
               <h4 class="h4TitleHosted">Payment Details</h4>
             </div>
                 <div class="row" id="framePayment">
-                   <div class="col-xs-12">
+                   <div class="col-xs-12 iframePadding">
 
                     <iframe id="load_payment" class="embed-responsive-item w100" name="load_payment"  frameborder="0" scrolling="no" hidden="true" >
                     </iframe>
@@ -573,11 +575,13 @@
 <!-- End Accept Hosted -->
 
 <!-- Begin Accept Customer -->
+
 <div id="acceptCustomer" class="acceptCustomerCont productCont container" >
    <div class="mrgT0">
         <h2 class="heading">Accept Customer</h2>
     </div>
   <div class="alert alert-success" id="alertCS">
+        <p id="noteCS" class="hideElement">Thank you! Your order has been successfully placed.</p>
             <span id="msgCS"></span>
   </div>
   <input type="hidden" name="isvalidated" id="isvalidated" value="no">
