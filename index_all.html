@@ -36,16 +36,15 @@
 	.navbar-centered .nav > li { display: inline; }
 	.navbar-centered .nav > li > a {display: inline-block; }
 	#home { color:ivory; margin-left: 15%; margin-right: 15%;}
-	@media (min-width: 768px) {
-		.navbar-centered .nav > li > a { width:15%; }
-		#home { font-size: 30px}
-		.navbar {
-			height: auto !important;
-		}
+		@media (min-width: 768px) {
+	    	.navbar-centered .nav > li > a { width:15%; }
+	    	#home { font-size: 30px}
 
-	}
+	    }
 	@media (min-width:360px ) and (max-width: 768px){
 		.navbar-centered .nav > li > a {font-size: 12px}
+			#home { font-size: 20px;margin-top: 226px !important;}
+	    	.navbar {height: 200px}
 	}
 	@media (max-width: 360px) {
 		.navbar-centered .nav > li > a {font-size: 10px}
@@ -56,55 +55,12 @@
 		.modal-dialog { width: 850px}
 		#add_shipping { height: 300px }
 	}
-	@media (max-width: 768px){
-		.navbar {
-			height: 100px !important;
-		}
-		.navbar-centered {
-			 padding-left: 0 !important; 
-		}
-		.productTypes>li {
-			padding-right: 0;
-		}
-		.btnsListJS {
-			padding-right: 0 !important; 
-		}
-		.btnsList {
-			padding-right: 0 !important; 
-		}
-		#home {
-			font-size: 20px;
-			margin-top: 0 !important; 
-			margin-top: 120px !important;
-			/* height: 48%; */
-			position: absolute;
-			display: table;
-		}
-
-		.homeText {
-			font-size: 18px !important;
-			color: #555;
-			font-weight: 600;
-			display: table-cell;
-			vertical-align: middle;
-		}
-		
-	}
-	@media (min-width: 768px) {
-		.navbar-centered .nav > li > a { width:15%; }
-		#home { font-size: 30px}
-		.navbar {
-			height: auto !important;
-		}
-		
-
-	}
 	.navbar{
 		border-radius: 2px;
 	}
 
 	.navbar-centered{
-		padding-left: 90px;
+		padding-left: 90px !important;
 	}
 	.productTypes>li
 	{
@@ -284,16 +240,15 @@ button:hover{
 }
 
 .btnsList{
-	padding-right: 8% ;
+	padding-right: 8% !important;
 }
 
 .btnsListJS{
-	padding-right: 7.3%;
+	padding-right: 7.3% !important;
 }
-.btnsListUI{
-	padding-right: 10%;
-}
+
 </style>
+
 <script src="scripts/jquery-2.1.4.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/jquery.cookie.js"></script>
