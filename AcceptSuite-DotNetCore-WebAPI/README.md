@@ -61,7 +61,6 @@ The first command will stop the World Wide Web publishing service and the second
 	
 ### Publish  AcceptSuiteService Application with Visual Studio 2017
 
-* Clone the Repository or Download the source code to local folder.
 
 * Open AcceptSuiteService.sln in Visual Studio 2017
 ![Image of Open-Solution](Images/Open-Solution.PNG)

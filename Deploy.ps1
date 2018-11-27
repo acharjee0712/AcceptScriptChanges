@@ -1,5 +1,5 @@
 #sets the folder path
-cd C:\git\AcceptScriptNewChanges\AcceptSuite-DotNetCore-WebAPI
+cd C:\GitHub\accept-sample-app-dotnet-master\AcceptSuite-DotNetCore-WebAPI
 
 # Build the solution
 dotnet build 
@@ -49,7 +49,7 @@ New-WebBinding -Name AcceptSuiteApiSite -Port 4403 -Protocol https
 Set-ItemProperty IIS:\AppPools\$SiteAppPool managedRuntimeVersion "" 
 
 # Creates the website for UI Application 
-$SiteFolderPath = "C:\git\AcceptScriptNewChanges"	
+$SiteFolderPath = "C:\GitHub\accept-sample-app-dotnet-master"
 $SiteAppPool = "AcceptSuiteUIPool"
 $SiteName = "AcceptSuiteUISite"
 $SiteHostName = "www.AcceptSuiteUISite.com"

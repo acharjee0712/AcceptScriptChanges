@@ -1,11 +1,7 @@
-# Accept Suite Integration with .Net Core WEB API
-
-## Prerequisite:
-*	Windows 10 Professional
-*	Sublime Text or any HTML editor.
-*	Internet Information Services 10
+# Deploy Accept Suite .Net Application
 
 ## Very detailed explanation of each product type.
+
 Authorized.Net Accept suite has below products.
 *	Accept JS
 *	Accept UI
@@ -18,48 +14,79 @@ https://developer.authorize.net/api/reference/features/acceptjs.html
 https://developer.authorize.net/api/reference/features/accept_hosted.html
 https://developer.authorize.net/api/reference/features/customer_profiles.html#Using_the_Accept_Customer_Hosted_Form
 
-## Web API Calls Integration with UI Application
+## Two ways to deploy Accept Suite .Net Application
 
+## [Manual Deployment](https://github.com/kapilkumar99/accept-sample-app-dotnet#Step-by-Step-Guide-for-Manual-Deployment)
+## [Automatic Deployment](https://github.com/kapilkumar99/accept-sample-app-dotnet#Step-by-Step-Guide-for-Automatic-Deployment)
 
-* Constants.js file contains keys where WEB API URL's can be updated. 
+## Step by Step Guide for Manual Deployment:
+
+## Prerequisite:
+*	Windows 10 Professional OS.
+*	Sublime Text or any HTML editor.
+*	Internet Information Services 10.
+
+## Steps to download the code from the repository:
+
+* Click on Clone or Download button from the repository.
+
+* Popup Displays 2 Options Open in Desktop or Download ZIP
+
+![Image of CloneorDownloadButton](Github-Images/CloneorDownloadButton.PNG)
+
+* Click on Download ZIP and choose the folder C:\GitHub to save.
+
+![Image of DownloadToGitHubFolder](Github-Images/DownloadToGitHubFolder.PNG)
+
+* UnZip the folder accept-sample-app-dotnet-master.zip
+
+* Once UnZipped , accept-sample-app-dotnet-master Folder contains css, js , HTML files along with few folders.
+
+![Image of FolderStructure](Github-Images/FolderStructure.PNG)
+ 
 
 * Open the folder **AcceptSuite-DotNetCore-WebAPI**
 
-* Detailed steps are explained on how to deploy on IIS.
+* [Detailed steps are explained on how to deploy on IIS.](https://github.com/kapilkumar99/accept-sample-app-dotnet/tree/master/AcceptSuite-DotNetCore-WebAPI#accept-suite)
 
 * Once deployed Successfully , update the URL's in Constants.js file as described below.
 
+* **Constants.js file contains Keys which is used globally across the application.**
 
-The URLs should be provided with IP address and API service site port number in the following format.
+## API URL's Section:
 
-**https://IPAddress:PortNumber/api/AcceptSuite/<ApiMethodName>**
+The URLs should be provided with static port number in the following format.
 
-* AcceptJSRequestUrl : URL to invoke Accept JS web service.
+**https://localhost:4403/api/AcceptSuite/ApiMethodName **
 
-	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/AcceptJS**
+* ** ApiMethodName ** parameter is dynamic and that need to be replaced with Product Type name 
+detailed description is explained below.
 
-![Image of AcceptJSRequestUrl](Github-Images/AcceptJSRequestUrl.PNG)
+* AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service.
+
+	**Sample URL: https://localhost:4403/api/AcceptSuite/AcceptJS**
+
 
 * AcceptHostedRequestUrl : URL to get the token value for Accept Hosted.
 
-	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/AcceptHosted**
+	**Sample URL: https://localhost:4403/api/AcceptSuite/AcceptHosted**
 
-![Image of HostedRequestUrl](Github-Images/HostedRequestUrl.PNG)
 
 * AcceptCustomerRequestUrl : URL to get the token value for Accept Customer.
 
-	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/AcceptCustomer**
+	**Sample URL: https://localhost:4403/api/AcceptSuite/AcceptCustomer**
 
-![Image of CustomerRequestUrl](Github-Images/CustomerRequestUrl.PNG)
 
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validate customer ID.
 
-	**Sample URL: https://IPAddress:PortNumber/api/AcceptSuite/ValidateCustomer**
-
-![Image of ValidateCustomerUrl](Github-Images/ValidateCustomerUrl.PNG)
+	**Sample URL: https://IPAddress:4403/api/AcceptSuite/ValidateCustomer**
  
+ 
+## Merchant Authentication Details:
 
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
+
+* ** Initially default sandbox credentials are provided, User can update his own Credentials. **
 
 * ClientKey 
 
@@ -92,6 +119,52 @@ The following are the parameters with values that remains constant throughout th
 
 ## browse the website
 
-Sample URL: https://10.173.192.248:5008/index_all.html
+Sample URL: https://localhost:4404/index_all.html
+
+![Image of dashboard](Github-Images/dashboard.PNG)
+
+## Step by Step Guide for Automatic Deployment
+
+## Prerequisite:
+
+*	Windows 10 Professional OS.
+
+*	Windows PowerShell.
+
+*	Internet Information Services 10.
+
+*   [IIS configuration](https://github.com/kapilkumar99/accept-sample-app-dotnet/tree/master/AcceptSuite-DotNetCore-WebAPI#iis-configuration)
+
+*   Please check if any website on IIS is hosted on Ports ** 4403,4404 ** if available please delete the existing ports.
+
+*	[Install the .NET Core Hosting Bundle](https://github.com/kapilkumar99/accept-sample-app-dotnet/tree/master/AcceptSuite-DotNetCore-WebAPI#install-the-net-core-hosting-bundle)
+
+*	[Proxy Configuration](https://github.com/kapilkumar99/accept-sample-app-dotnet/tree/master/AcceptSuite-DotNetCore-WebAPI#proxy-configuration)
+
+# Steps to run the bat file after downloading the code
+
+* Click on Clone or Download button from the repository.
+
+* Popup Displays 2 Options Open in Desktop or Download ZIP
+
+![Image of CloneorDownloadButton](Github-Images/CloneorDownloadButton.PNG)
+
+* Click on Download ZIP and choose the folder C:\GitHub to save.
+
+![Image of DownloadToGitHubFolder](Github-Images/DownloadToGitHubFolder.PNG)
+
+* UnZip the folder accept-sample-app-dotnet-master.zip
+
+* Once UnZipped , accept-sample-app-dotnet-master Folder contains css, js , HTML files along with few folders.
+
+![Image of FolderStructure](Github-Images/FolderStructure.PNG)
+
+* ** Before running bat file its mandatory to follow all the prerequisite steps.**
+
+* Run deploy.bat file as Administrator.
+
+* bat file internally will take the commands from Deploy.ps1 file and will host the Accept Suite Application.
+
+* Once batch file successfully execute it will automatically launch the Accept Suite URL: https://localhost:4404/Index_all.html in Chrome Browser.
 
 ![Image of dashboard](Github-Images/dashboard.PNG)

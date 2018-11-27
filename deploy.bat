@@ -1,0 +1,1 @@
+powershell.exe -noexit -file C:\GitHub\accept-sample-app-dotnet-master\Deploy.ps1
